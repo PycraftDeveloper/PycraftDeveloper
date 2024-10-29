@@ -14,3 +14,7 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+ ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=PycraftDeveloper&theme=tokyonight&langs_count=5)
+
+ [![Top Langs](https://github-readme-stats.vercel.app/api?username=PycraftDeveloper&theme=algolia&show_icons=true)](https://github.com/PycraftDeveloper)	

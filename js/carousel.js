@@ -1,6 +1,7 @@
 // carousel.js
-// Simple carousel with auto-rotate, random start, arrow + dot navigation, and touch support.
-// Updated slide transform logic so slides align precisely and are centered.
+// Pixel-based slide sizing and transforms to guarantee exact alignment.
+// Auto-rotate, random start, arrow + dot navigation, keyboard and touch support.
+// Recalculates sizes on resize.
 
 document.addEventListener('DOMContentLoaded', function () {
   const slidesData = [
@@ -31,14 +32,16 @@ document.addEventListener('DOMContentLoaded', function () {
   const caption = document.getElementById('carouselCaption');
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
+  const viewport = document.querySelector('.carousel-viewport');
 
   let current = Math.floor(Math.random() * slidesData.length); // random start
-  let slideCount = slidesData.length;
+  const slideCount = slidesData.length;
+  let slideWidth = 0;
   let isPlaying = true;
   const intervalMs = 5000;
   let timer = null;
 
-  // build slides
+  // build slides + dots
   slidesData.forEach((s, i) => {
     const slide = document.createElement('div');
     slide.className = 'carousel-slide';
@@ -52,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.className = 'slide-overlay';
     slide.appendChild(overlay);
 
-    // caption inside slide (bottom-left)
     const info = document.createElement('div');
     info.className = 'slide-info';
     info.innerHTML = `<div>${s.title}</div><div style="font-weight:400;font-size:18px;margin-top:6px;">${s.subtitle}</div>`;
@@ -60,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     track.appendChild(slide);
 
-    // dot
     const dot = document.createElement('button');
     dot.className = 'carousel-dot';
     dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
@@ -72,44 +73,57 @@ document.addEventListener('DOMContentLoaded', function () {
   const slides = Array.from(track.children);
   const dots = Array.from(dotsContainer.children);
 
-  function update() {
-    // compute percent shift relative to the track width so that each slide aligns
-    // track width = 100% * slideCount; moving by one slide equals (100 / slideCount)%
-    const shiftPercent = -current * (100 / slideCount);
-    track.style.transform = `translateX(${shiftPercent}%)`;
+  // Set widths in pixels so each slide exactly matches the visible viewport.
+  function setSizes(animate = false) {
+    // measure viewport available width (includes viewport padding)
+    slideWidth = Math.max(0, viewport.clientWidth);
+
+    // disable transition when resizing to avoid animation jump
+    track.style.transition = animate ? 'transform 480ms cubic-bezier(.22,.9,.2,1)' : 'none';
+
+    // assign each slide an explicit pixel width
+    slides.forEach(s => {
+      s.style.width = `${slideWidth}px`;
+    });
+
+    // set explicit track width
+    track.style.width = `${slideWidth * slideCount}px`;
+
+    // set transform to place the correct slide
+    track.style.transform = `translateX(${-current * slideWidth}px)`;
+  }
+
+  function updateUI() {
     dots.forEach((d, i) => d.classList.toggle('active', i === current));
     caption.textContent = slidesData[current].title;
   }
 
-  function moveTo(index) {
+  function moveTo(index, animate = true) {
     current = (index + slideCount) % slideCount;
-    update();
+    // ensure transition is enabled
+    track.style.transition = animate ? 'transform 480ms cubic-bezier(.22,.9,.2,1)' : 'none';
+    // use pixel transform for exact alignment
+    track.style.transform = `translateX(${-current * slideWidth}px)`;
+    updateUI();
     restartTimer();
   }
 
-  function next() {
-    moveTo(current + 1);
-  }
-
-  function prev() {
-    moveTo(current - 1);
-  }
+  function next() { moveTo(current + 1); }
+  function prev() { moveTo(current - 1); }
 
   nextBtn.addEventListener('click', next);
   prevBtn.addEventListener('click', prev);
 
-  // keyboard support
-  track.addEventListener('keydown', (e) => {
+  // keyboard support (focusable viewport)
+  viewport.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') prev();
     if (e.key === 'ArrowRight') next();
   });
 
-  // auto-play
+  // autoplay
   function startTimer() {
     stopTimer();
-    timer = setInterval(() => {
-      next();
-    }, intervalMs);
+    timer = setInterval(next, intervalMs);
     isPlaying = true;
   }
   function stopTimer() {
@@ -122,36 +136,66 @@ document.addEventListener('DOMContentLoaded', function () {
     startTimer();
   }
 
-  // pause on hover/focus (attach to viewport so hover on arrows doesn't accidentally pause incorrectly)
-  const viewport = document.querySelector('.carousel-viewport');
+  // pause on hover/focus
   viewport.addEventListener('mouseenter', stopTimer);
   viewport.addEventListener('mouseleave', startTimer);
   viewport.addEventListener('focusin', stopTimer);
   viewport.addEventListener('focusout', startTimer);
 
-  // touch support for swipe
+  // touch support: swipe
   let touchStartX = 0;
-  let touchEndX = 0;
   viewport.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
+    touchStartX = e.changedTouches[0].clientX;
   }, {passive:true});
   viewport.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
+    const touchEndX = e.changedTouches[0].clientX;
     const diff = touchEndX - touchStartX;
     if (Math.abs(diff) > 40) {
-      if (diff > 0) prev(); else next();
+      if (diff > 0) prev();
+      else next();
     }
   });
 
-  // initialize
-  // Force a reflow/read to ensure layout is ready (helps in some browsers)
-  window.requestAnimationFrame(() => {
-    update();
-    startTimer();
-  });
+  // debounce resize
+  let resizeTimer = null;
+  function onResize() {
+    if (resizeTimer) clearTimeout(resizeTimer);
+    // recalc after a short pause to let layout settle
+    resizeTimer = setTimeout(() => {
+      // keep the same logical slide visible; no animation
+      setSizes(false);
+    }, 120);
+  }
+  window.addEventListener('resize', onResize);
 
-  // expose for debugging (optional)
+  // ensure sizes are set after images/fonts load
+  function init() {
+    setSizes(false);       // compute sizes without animation
+    updateUI();
+    // start the autoplay after layout settled
+    startTimer();
+  }
+
+  // Try to initialize after images have loaded; also fallback to rAF
+  let imagesToLoad = 0;
+  slides.forEach(sl => {
+    const bg = sl.style.backgroundImage;
+    const match = bg && bg.match(/url\("(.*)"\)/);
+    if (match && match[1]) {
+      imagesToLoad++;
+      const img = new Image();
+      img.src = match[1];
+      img.onload = img.onerror = () => {
+        imagesToLoad--;
+        if (imagesToLoad === 0) requestAnimationFrame(init);
+      };
+    }
+  });
+  // if there are no background images (or already cached), just init
+  if (imagesToLoad === 0) requestAnimationFrame(init);
+
+  // expose for debugging
   window.__portfolioCarousel = {
-    moveTo, next, prev, getCurrent: () => current
+    moveTo, next, prev, getCurrent: () => current, recalc: () => setSizes(false)
   };
 });

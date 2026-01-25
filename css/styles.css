@@ -104,11 +104,17 @@ body{
 .carousel{
   position:relative;
   border:3px solid #222;
-  padding:10px 60px; /* space for arrows */
   background:transparent;
+  overflow:visible; /* arrows sit outside viewport */
+}
+
+/* The viewport defines the visible area and gutters for padding */
+.carousel-viewport{
+  padding:10px 60px; /* space for arrows */
   overflow:hidden;
 }
 
+/* track slides horizontally inside viewport */
 .carousel-track{
   position:relative;
   height:260px;
@@ -116,22 +122,25 @@ body{
   transition:transform 480ms cubic-bezier(.22,.9,.2,1);
   touch-action:pan-y;
   align-items:center;
-  justify-content:center;
+  justify-content:flex-start;
   gap:0;
 }
 
+/* each slide is exactly one viewport width */
 .carousel-slide{
-  min-width:100%;
+  flex:0 0 100%;
   height:100%;
   position:relative;
   display:flex;
   align-items:flex-end;
   color:#fff;
   background-size:cover;
-  background-position:center;
+  background-position:center center;
+  background-repeat:no-repeat;
   padding:18px 28px;
 }
 
+/* overlay just to show "IMAGE" text on top */
 .slide-overlay{
   position:absolute;
   inset:0;
@@ -200,7 +209,6 @@ body{
 .carousel-prev{ left:8px; }
 .carousel-next{ right:8px; }
 
-/* make arrows larger clickable and place slightly outside */
 .carousel-nav svg{ filter:drop-shadow(0 2px 0 rgba(0,0,0,.5)); }
 
 /* Smaller decorative caption inside slide (like subtext) */
@@ -231,7 +239,7 @@ body{
   .profile-meta{ width:100% }
   .name{ font-size:28px }
   .skills{ font-size:16px }
-  .carousel{
+  .carousel-viewport{
     padding:8px 20px;
   }
   .carousel-track{ height:220px; }
@@ -244,4 +252,7 @@ body{
   .carousel-track{ height:180px; }
   .carousel-caption{ font-size:18px; }
   .site{ padding:10px; }
+  .carousel-viewport{ padding:8px 12px; }
+  .carousel-prev{ left:4px; }
+  .carousel-next{ right:4px; }
 }

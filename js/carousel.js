@@ -1,5 +1,6 @@
 // carousel.js
 // Simple carousel with auto-rotate, random start, arrow + dot navigation, and touch support.
+// Updated slide transform logic so slides align precisely and are centered.
 
 document.addEventListener('DOMContentLoaded', function () {
   const slidesData = [
@@ -72,9 +73,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const dots = Array.from(dotsContainer.children);
 
   function update() {
-    // translate track
-    const shift = -current * 100;
-    track.style.transform = `translateX(${shift}%)`;
+    // compute percent shift relative to the track width so that each slide aligns
+    // track width = 100% * slideCount; moving by one slide equals (100 / slideCount)%
+    const shiftPercent = -current * (100 / slideCount);
+    track.style.transform = `translateX(${shiftPercent}%)`;
     dots.forEach((d, i) => d.classList.toggle('active', i === current));
     caption.textContent = slidesData[current].title;
   }
@@ -120,19 +122,20 @@ document.addEventListener('DOMContentLoaded', function () {
     startTimer();
   }
 
-  // pause on hover/focus
-  track.addEventListener('mouseenter', stopTimer);
-  track.addEventListener('mouseleave', startTimer);
-  track.addEventListener('focusin', stopTimer);
-  track.addEventListener('focusout', startTimer);
+  // pause on hover/focus (attach to viewport so hover on arrows doesn't accidentally pause incorrectly)
+  const viewport = document.querySelector('.carousel-viewport');
+  viewport.addEventListener('mouseenter', stopTimer);
+  viewport.addEventListener('mouseleave', startTimer);
+  viewport.addEventListener('focusin', stopTimer);
+  viewport.addEventListener('focusout', startTimer);
 
   // touch support for swipe
   let touchStartX = 0;
   let touchEndX = 0;
-  track.addEventListener('touchstart', (e) => {
+  viewport.addEventListener('touchstart', (e) => {
     touchStartX = e.changedTouches[0].screenX;
   }, {passive:true});
-  track.addEventListener('touchend', (e) => {
+  viewport.addEventListener('touchend', (e) => {
     touchEndX = e.changedTouches[0].screenX;
     const diff = touchEndX - touchStartX;
     if (Math.abs(diff) > 40) {
@@ -141,8 +144,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // initialize
-  update();
-  startTimer();
+  // Force a reflow/read to ensure layout is ready (helps in some browsers)
+  window.requestAnimationFrame(() => {
+    update();
+    startTimer();
+  });
 
   // expose for debugging (optional)
   window.__portfolioCarousel = {

@@ -37,8 +37,11 @@
           <svg width="46" height="46" viewBox="0 0 24 24" aria-hidden="true"><path fill="#000" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
         </button>
 
-        <div class="carousel-track" id="carouselTrack" tabindex="0">
-          <!-- slides injected by JS -->
+        <!-- viewport keeps padding / arrow gutters separate from the track -->
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="carouselTrack" tabindex="0">
+            <!-- slides injected by JS -->
+          </div>
         </div>
 
         <button class="carousel-nav carousel-next" id="nextBtn" aria-label="Next slide">

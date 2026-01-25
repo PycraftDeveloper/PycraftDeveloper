@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const slideCount = slidesData.length;
   let slideWidth = 0;
   let isPlaying = true;
-  const intervalMs = 5000;
+  const intervalMs = 15000;
   let timer = null;
 
   // build slides + dots

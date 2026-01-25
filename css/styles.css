@@ -106,40 +106,44 @@ body{
   border:3px solid #222;
   background:transparent;
   overflow:visible; /* arrows sit outside viewport */
+  height: 50vh;
 }
 
 /* The viewport defines the visible area and gutters for padding */
 .carousel-viewport{
-  padding:10px 60px; /* space for arrows */
   overflow:hidden;
+  height: 100%;
 }
 
 /* track slides horizontally inside viewport */
 .carousel-track{
   position:relative;
-  height:260px;
+  height:100%;
   display:flex;
   transition:transform 480ms cubic-bezier(.22,.9,.2,1);
   touch-action:pan-y;
   align-items:center;
   justify-content:flex-start;
   gap:0;
+  min-height: 100%;
 }
 
 /* each slide is exactly one viewport width */
-.carousel-slide::before{
-  flex:0 0 100%;
+.carousel-slide{
+  width:100%;                  /* JS will set exact width */
   height:100%;
   position:relative;
   display:flex;
-  align-items:flex-end;
+  align-items:flex-center;
   color:#fff;
-  background-size:cover;
-  background-position:center center;
+  background-size:cover;        /* fill width */
+  background-position:center;   /* center vertically */
   background-repeat:no-repeat;
   padding:18px 28px;
   overflow:hidden;
+  flex:0 0 auto;                /* allow JS width to take effect */
 }
+
 
 /* overlay just to show "IMAGE" text on top */
 .slide-overlay{
@@ -170,6 +174,7 @@ body{
   font-size:28px;
   color:#07112a;
   font-weight:500;
+  display:none
 }
 
 /* dots */
@@ -178,20 +183,20 @@ body{
   gap:12px;
   align-items:center;
   justify-content:center;
-  width:160px;
+  margin: 0 auto;
 }
 
 .carousel-dot{
   width:12px;
   height:12px;
   border-radius:50%;
-  border:2px solid #234;
+  border:2px solid rgb(0, 0, 0);
   background:transparent;
   cursor:pointer;
 }
 
 .carousel-dot.active{
-  background:#234;
+  background:rgb(0, 0, 0);
 }
 
 /* arrows */
@@ -216,7 +221,7 @@ body{
 
 /* Smaller decorative caption inside slide (like subtext) */
 .slide-info{
-  position:relative;
+  position:absolute;
   left:24px;
   bottom:20px;
   color:rgb(255, 255, 255);
@@ -256,7 +261,7 @@ body{
   .carousel-track{ height:180px; }
   .carousel-caption{ font-size:18px; }
   .site{ padding:10px; }
-  .carousel-viewport{ padding:8px 12px; }
+  .carousel-viewport{ padding:0px 0px; }
   .carousel-prev{ left:4px; }
   .carousel-next{ right:4px; }
 }

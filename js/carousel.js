@@ -8,22 +8,22 @@ document.addEventListener('DOMContentLoaded', function () {
     {
       title: "How To Train Your Dragon Game",
       subtitle: "Click to find out more",
-      image: "images/featured1.jpg"
+      image: "images/HighresScreenshot00003.jpg"
     },
     {
       title: "Project Two — Experimental Renderer",
       subtitle: "Click to find out more",
-      image: "images/featured2.jpg"
+      image: "images/HighresScreenshot00003.jpg"
     },
     {
       title: "Mobile Puzzle Prototype",
       subtitle: "Click to find out more",
-      image: "images/featured3.jpg"
+      image: "images/HighresScreenshot00003.jpg"
     },
     {
       title: "Research Paper — PMMA",
       subtitle: "Click to find out more",
-      image: "images/featured4.jpg"
+      image: "images/HighresScreenshot00003.jpg"
     }
   ];
 

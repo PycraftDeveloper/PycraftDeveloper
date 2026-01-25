@@ -1,0 +1,247 @@
+:root{
+  --accent:#3f6fc2;
+  --bg:#ffffff;
+  --text:#0a0a0a;
+  --muted:#666;
+  --max-width:1200px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--text);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.4;
+}
+
+.site{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:18px;
+}
+
+/* Profile header */
+.profile{
+  display:flex;
+  gap:20px;
+  align-items:flex-start;
+  margin-bottom:18px;
+}
+
+.avatar{
+  flex:0 0 160px;
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  overflow:hidden;
+  border:3px solid #222;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--accent);
+}
+
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* Meta */
+.profile-meta{
+  flex:1 1 auto;
+}
+
+.name{
+  margin:0;
+  font-size:34px;
+  font-weight:700;
+  letter-spacing: -0.5px;
+}
+
+.links{
+  margin-top:6px;
+  color:var(--muted);
+  font-weight:600;
+}
+
+.links a{
+  color:inherit;
+  text-decoration:none;
+  margin:0 6px;
+}
+
+.about{
+  margin-top:10px;
+  margin-bottom:10px;
+  color:var(--text);
+}
+
+.skills{
+  margin:6px 0 0;
+  font-size:20px;
+  font-weight:300;
+}
+
+/* Section titles */
+.section-title{
+  margin:8px 0 14px;
+  font-size:28px;
+  text-decoration:underline;
+  text-underline-offset:6px;
+}
+
+/* Carousel */
+.featured-section{
+  margin-bottom:32px;
+}
+
+.carousel{
+  position:relative;
+  border:3px solid #222;
+  padding:10px 60px; /* space for arrows */
+  background:transparent;
+  overflow:hidden;
+}
+
+.carousel-track{
+  position:relative;
+  height:260px;
+  display:flex;
+  transition:transform 480ms cubic-bezier(.22,.9,.2,1);
+  touch-action:pan-y;
+  align-items:center;
+  justify-content:center;
+  gap:0;
+}
+
+.carousel-slide{
+  min-width:100%;
+  height:100%;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  color:#fff;
+  background-size:cover;
+  background-position:center;
+  padding:18px 28px;
+}
+
+.slide-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(63,111,194,0.9);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:rgba(255,255,255,0.95);
+  font-weight:600;
+  font-size:22px;
+}
+
+/* caption bottom-left */
+.carousel-footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:10px;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.carousel-caption{
+  font-size:28px;
+  color:#07112a;
+  font-weight:500;
+}
+
+/* dots */
+.carousel-dots{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:center;
+  width:160px;
+}
+
+.carousel-dot{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  border:2px solid #234;
+  background:transparent;
+  cursor:pointer;
+}
+
+.carousel-dot.active{
+  background:#234;
+}
+
+/* arrows */
+.carousel-nav{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:transparent;
+  border:none;
+  padding:6px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  z-index:5;
+}
+
+.carousel-prev{ left:8px; }
+.carousel-next{ right:8px; }
+
+/* make arrows larger clickable and place slightly outside */
+.carousel-nav svg{ filter:drop-shadow(0 2px 0 rgba(0,0,0,.5)); }
+
+/* Smaller decorative caption inside slide (like subtext) */
+.slide-info{
+  position:absolute;
+  left:24px;
+  bottom:20px;
+  color:#042;
+  font-weight:700;
+  font-size:28px;
+}
+
+/* All works */
+.all-works .work{
+  margin-top:8px;
+  padding:6px 0;
+}
+
+/* Responsive */
+@media (max-width:880px){
+  .site{ padding:12px; }
+  .profile{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+  }
+  .avatar{ width:140px; height:140px; }
+  .profile-meta{ width:100% }
+  .name{ font-size:28px }
+  .skills{ font-size:16px }
+  .carousel{
+    padding:8px 20px;
+  }
+  .carousel-track{ height:220px; }
+  .carousel-caption{ font-size:20px; }
+  .slide-info{ font-size:20px; left:14px; bottom:14px; }
+}
+
+@media (max-width:480px){
+  .avatar{ width:120px; height:120px; }
+  .carousel-track{ height:180px; }
+  .carousel-caption{ font-size:18px; }
+  .site{ padding:10px; }
+}

@@ -1,0 +1,152 @@
+// carousel.js
+// Simple carousel with auto-rotate, random start, arrow + dot navigation, and touch support.
+
+document.addEventListener('DOMContentLoaded', function () {
+  const slidesData = [
+    {
+      title: "How To Train Your Dragon Game",
+      subtitle: "Click to find out more",
+      image: "images/HighresScreenshot00003.jpg"
+    },
+    {
+      title: "Project Two — Experimental Renderer",
+      subtitle: "Click to find out more",
+      image: "images/HighresScreenshot00003.jpg"
+    },
+    {
+      title: "Mobile Puzzle Prototype",
+      subtitle: "Click to find out more",
+      image: "images/HighresScreenshot00003.jpg"
+    },
+    {
+      title: "Research Paper — PMMA",
+      subtitle: "Click to find out more",
+      image: "images/HighresScreenshot00003.jpg"
+    }
+  ];
+
+  const track = document.getElementById('carouselTrack');
+  const dotsContainer = document.getElementById('carouselDots');
+  const caption = document.getElementById('carouselCaption');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  let current = Math.floor(Math.random() * slidesData.length); // random start
+  let slideCount = slidesData.length;
+  let isPlaying = true;
+  const intervalMs = 5000;
+  let timer = null;
+
+  // build slides
+  slidesData.forEach((s, i) => {
+    const slide = document.createElement('div');
+    slide.className = 'carousel-slide';
+    slide.style.backgroundImage = `url("${s.image}")`;
+    slide.setAttribute('role', 'group');
+    slide.setAttribute('aria-roledescription', 'slide');
+    slide.setAttribute('aria-label', `${i + 1} of ${slidesData.length}`);
+    slide.setAttribute('data-index', i);
+
+    const overlay = document.createElement('div');
+    overlay.className = 'slide-overlay';
+    overlay.textContent = 'IMAGE';
+    slide.appendChild(overlay);
+
+    // caption inside slide (bottom-left)
+    const info = document.createElement('div');
+    info.className = 'slide-info';
+    info.innerHTML = `<div>${s.title}</div><div style="font-weight:400;font-size:18px;margin-top:6px;">${s.subtitle}</div>`;
+    slide.appendChild(info);
+
+    track.appendChild(slide);
+
+    // dot
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot';
+    dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+    dot.setAttribute('data-index', i);
+    dot.addEventListener('click', () => moveTo(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  const slides = Array.from(track.children);
+  const dots = Array.from(dotsContainer.children);
+
+  function update() {
+    // translate track
+    const shift = -current * 100;
+    track.style.transform = `translateX(${shift}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    caption.textContent = slidesData[current].title;
+  }
+
+  function moveTo(index) {
+    current = (index + slideCount) % slideCount;
+    update();
+    restartTimer();
+  }
+
+  function next() {
+    moveTo(current + 1);
+  }
+
+  function prev() {
+    moveTo(current - 1);
+  }
+
+  nextBtn.addEventListener('click', next);
+  prevBtn.addEventListener('click', prev);
+
+  // keyboard support
+  track.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') prev();
+    if (e.key === 'ArrowRight') next();
+  });
+
+  // auto-play
+  function startTimer() {
+    stopTimer();
+    timer = setInterval(() => {
+      next();
+    }, intervalMs);
+    isPlaying = true;
+  }
+  function stopTimer() {
+    if (timer) clearInterval(timer);
+    timer = null;
+    isPlaying = false;
+  }
+  function restartTimer() {
+    stopTimer();
+    startTimer();
+  }
+
+  // pause on hover/focus
+  track.addEventListener('mouseenter', stopTimer);
+  track.addEventListener('mouseleave', startTimer);
+  track.addEventListener('focusin', stopTimer);
+  track.addEventListener('focusout', startTimer);
+
+  // touch support for swipe
+  let touchStartX = 0;
+  let touchEndX = 0;
+  track.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, {passive:true});
+  track.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchEndX - touchStartX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) prev(); else next();
+    }
+  });
+
+  // initialize
+  update();
+  startTimer();
+
+  // expose for debugging (optional)
+  window.__portfolioCarousel = {
+    moveTo, next, prev, getCurrent: () => current
+  };
+});

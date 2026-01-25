@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Thomas Jebson</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="site">
+    <header class="profile">
+      <div class="avatar">
+        <img src="images/avatar.jpg" alt="Profile avatar">
+      </div>
+      <div class="profile-meta">
+        <h1 class="name">Thomas Jebson</h1>
+        <div class="links">
+          <a href="#" aria-label="CV">CV</a> |
+          <a href="#" aria-label="GitHub">GitHub</a> |
+          <a href="#" aria-label="LinkedIn">LinkedIn</a> |
+          <span class="email">Contact me by email: <a href="mailto:yourname@gmail.com">___@gmail.com</a></span>
+        </div>
+        <p class="about">
+          This is some text about me, its pretty cool right? This is some text about me, its pretty cool right? This is some text about me, its pretty cool right?
+        </p>
+        <p class="skills">Python | Cython | C++ | C# | Unity | Unreal Engine</p>
+      </div>
+    </header>
+
+    <section class="featured-section">
+      <h2 class="section-title">Featured</h2>
+
+      <div class="carousel" id="carousel" aria-roledescription="carousel">
+        <button class="carousel-nav carousel-prev" id="prevBtn" aria-label="Previous slide">
+          <!-- left chevron -->
+          <svg width="46" height="46" viewBox="0 0 24 24" aria-hidden="true"><path fill="#000" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        </button>
+
+        <div class="carousel-track" id="carouselTrack" tabindex="0">
+          <!-- slides injected by JS -->
+        </div>
+
+        <button class="carousel-nav carousel-next" id="nextBtn" aria-label="Next slide">
+          <!-- right chevron -->
+          <svg width="46" height="46" viewBox="0 0 24 24" aria-hidden="true"><path fill="#000" d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg>
+        </button>
+
+        <div class="carousel-footer">
+          <div class="carousel-caption" id="carouselCaption" aria-live="polite"></div>
+          <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Slide dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="all-works">
+      <h2 class="section-title">All works</h2>
+
+      <article class="work">
+        <h3>PMMA</h3>
+        <p>More text/image content here</p>
+      </article>
+
+      <!-- add more works here -->
+    </section>
+  </main>
+
+  <script src="js/carousel.js" defer></script>
+</body>
+</html>

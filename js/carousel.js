@@ -7,22 +7,22 @@ document.addEventListener('DOMContentLoaded', function () {
   const slidesData = [
     {
       title: "How To Train Your Dragon Game",
-      subtitle: "Click to find out more",
+      subtitle: "(Click to find out more)",
       image: "images/HighresScreenshot00003.jpg"
     },
     {
       title: "Project Two — Experimental Renderer",
-      subtitle: "Click to find out more",
+      subtitle: "(Click to find out more)",
       image: "images/HighresScreenshot00003.jpg"
     },
     {
       title: "Mobile Puzzle Prototype",
-      subtitle: "Click to find out more",
+      subtitle: "(Click to find out more)",
       image: "images/HighresScreenshot00003.jpg"
     },
     {
       title: "Research Paper — PMMA",
-      subtitle: "Click to find out more",
+      subtitle: "(Click to find out more)",
       image: "images/HighresScreenshot00003.jpg"
     }
   ];
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const info = document.createElement('div');
     info.className = 'slide-info';
-    info.innerHTML = `<div>${s.title}</div><div style="font-weight:400;font-size:18px;margin-top:6px;">${s.subtitle}</div>`;
+    info.innerHTML = `<div>${s.title}</div><div style="font-weight:400;font-size:18px;margin-top:6px;font-style:italic;">${s.subtitle}</div>`;
     slide.appendChild(info);
 
     track.appendChild(slide);

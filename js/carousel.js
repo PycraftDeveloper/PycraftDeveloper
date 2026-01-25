@@ -6,22 +6,22 @@ document.addEventListener('DOMContentLoaded', function () {
     {
       title: "How To Train Your Dragon Game",
       subtitle: "Click to find out more",
-      image: "images/HighresScreenshot00003.jpg"
+      image: "images/featured1.jpg"
     },
     {
       title: "Project Two — Experimental Renderer",
       subtitle: "Click to find out more",
-      image: "images/HighresScreenshot00003.jpg"
+      image: "images/featured2.jpg"
     },
     {
       title: "Mobile Puzzle Prototype",
       subtitle: "Click to find out more",
-      image: "images/HighresScreenshot00003.jpg"
+      image: "images/featured3.jpg"
     },
     {
       title: "Research Paper — PMMA",
       subtitle: "Click to find out more",
-      image: "images/HighresScreenshot00003.jpg"
+      image: "images/featured4.jpg"
     }
   ];
 
@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const overlay = document.createElement('div');
     overlay.className = 'slide-overlay';
-    overlay.textContent = 'IMAGE';
     slide.appendChild(overlay);
 
     // caption inside slide (bottom-left)

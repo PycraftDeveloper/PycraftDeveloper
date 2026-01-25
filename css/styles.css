@@ -135,7 +135,7 @@ body{
 .slide-overlay{
   position:absolute;
   inset:0;
-  background:rgba(63,111,194,0.9);
+  background:rgba(0,0,0,0.5);
   display:flex;
   align-items:center;
   justify-content:center;
@@ -208,7 +208,7 @@ body{
   position:absolute;
   left:24px;
   bottom:20px;
-  color:#042;
+  color:rgb(255, 255, 255);
   font-weight:700;
   font-size:28px;
 }

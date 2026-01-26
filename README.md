@@ -2,10 +2,10 @@
    <img width=100% src=https://capsule-render.vercel.app/api?type=waving&height=100&color=gradient&reversal=true />
 </div>
 
-<h2 align="center">
+<h1 align="center">
   Hi, I'm Thomas Jebson
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28">
-</h2>
+</h1>
 
 <p align="center">
   <a href="https://github.com/PycraftDeveloper/" align="center" ><img align="center"  alt="" src="https://visitor-badge.laobi.icu/badge?page_id=PycraftDeveloper.PycraftDeveloper"></a>

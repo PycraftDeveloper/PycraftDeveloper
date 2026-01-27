@@ -43,6 +43,7 @@ body{
   align-items:center;
   justify-content:center;
   background:var(--accent);
+  aspect-ratio: 1/1;
 }
 
 .avatar img{
@@ -257,7 +258,7 @@ body{
     align-items:center;
     text-align:center;
   }
-  .avatar{ width:140px; height:140px; }
+  /*.avatar{ width:140px; height:140px; }*/
   .profile-meta{ width:100% }
   .name{ font-size:28px }
   .skills{ font-size:16px }
@@ -270,7 +271,7 @@ body{
 }
 
 @media (max-width:480px){
-  .avatar{ width:120px; height:120px; }
+  /*.avatar{ width:120px; height:120px; }*/
   .carousel-track{ height:180px; }
   .carousel-caption{ font-size:18px; }
   .site{ padding:10px; }

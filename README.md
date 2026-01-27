@@ -11,8 +11,6 @@
   <a href="https://github.com/PycraftDeveloper/" align="center" ><img align="center"  alt="" src="https://visitor-badge.laobi.icu/badge?page_id=PycraftDeveloper.PycraftDeveloper"></a>
 </p>
 
----
-
 I'm a BSc Games Programming student (2nd year) at the University of Northampton. To see what I've been up to, [check out my portfolio](https://pycraftdeveloper.github.io/PycraftDeveloper/)! I am also working on my own graphics and multi-media API, [PMMA](https://github.com/PycraftDeveloper/PMMA) as well as [my other programming projects](https://github.com/PycraftDeveloper?tab=repositories). I spend my free time walking, cycling or gaming!
 
 ## 🛠 &nbsp;Tech Stack
@@ -33,16 +31,12 @@ I'm a BSc Games Programming student (2nd year) at the University of Northampton.
 
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white) ![Unity](https://img.shields.io/badge/Unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white) ![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-%23313131.svg?style=for-the-badge&logo=unrealengine&logoColor=white)
 
----
-
 ## 🔗 &nbsp;Contact Me
 
 <div align="center">
 <a href="mailto:thomasjebbo@gmail.com"><img alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 <a href="https://www.linkedin.com/in/thomas-jebson/"><img alt="LinkedIn" src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
 </div>
-
----
 
 ## 📊 Profile Statistics
 

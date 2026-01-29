@@ -6,14 +6,19 @@
 document.addEventListener('DOMContentLoaded', function () {
   const slidesData = [
     {
-      title: "How To Train Your Dragon Game",
+      title: "PMMA - Python Multi-Media API",
       subtitle: "(Click to find out more)",
-      image: "images/httyd_game.jpg"
+      image: "images/pmma.jpg"
     },
     {
       title: "Gourmet Heaven",
       subtitle: "(Click to find out more)",
       image: "images/gourmet_heaven.jpg"
+    },
+    {
+      title: "How To Train Your Dragon Game",
+      subtitle: "(Click to find out more)",
+      image: "images/httyd_game.jpg"
     }
   ];
 

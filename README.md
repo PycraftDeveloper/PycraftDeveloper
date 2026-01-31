@@ -17,21 +17,9 @@ _Please note that my portfolio and this readme are currently still 'under constr
 
 ## 🛠 &nbsp;Tech Stack
 
-#### 🔧 Programming Languages
-
-![Python](https://img.shields.io/badge/Python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![C#](https://img.shields.io/badge/C%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
-
-#### 🖥️ Frameworks
-
-![OpenGL](https://img.shields.io/badge/OpenGL-%23FFFFFF.svg?style=for-the-badge&logo=opengl)
-
-#### 📚 Libraries
-
-![Numpy](https://img.shields.io/badge/NumPy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
-
-#### 🔧 Software Development Tools
-
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white) ![Unity](https://img.shields.io/badge/Unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white) ![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-%23313131.svg?style=for-the-badge&logo=unrealengine&logoColor=white)
+| Programming Languages | Engines | Frameworks & Libraries | Software Development Tools | Platforms |
+|---|---|---|---|---|
+| ![Python](https://img.shields.io/badge/Python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)  ![C#](https://img.shields.io/badge/C%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white) | ![Unity](https://img.shields.io/badge/Unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white) ![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-%23313131.svg?style=for-the-badge&logo=unrealengine&logoColor=white) | ![OpenGL](https://img.shields.io/badge/OpenGL-%23FFFFFF.svg?style=for-the-badge&logo=opengl) ![Numpy](https://img.shields.io/badge/NumPy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) | ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white) | ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white) |
 
 ## 🔗 &nbsp;Contact Me
 
@@ -52,14 +40,6 @@ _Please note that my portfolio and this readme are currently still 'under constr
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=PycraftDeveloper&theme=github_dark)
 
  </div>
-
- <div align=center>
-
- [![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=PycraftDeveloper&theme=dracula&background=1E2B3C&border=B2E0FF&stroke=000439&ring=95CCFF&fire=95CCFF&currStreakNum=95CCFF&sideNums=95CCFF&currStreakLabel=95CCFF&sideLabels=95CCFF&dates=FFFFFF)](https://git.io/streak-stats)
-
- </div>
-
- [![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=PycraftDeveloper&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
  <div align=center>
 

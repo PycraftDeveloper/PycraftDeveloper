@@ -85,7 +85,6 @@ body{
 
 .skills{
   margin:6px 0 0;
-  font-size:20px;
   font-weight:300;
 }
 
@@ -250,6 +249,75 @@ body{
   padding:6px 0;
 }
 
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 0.3rem;
+}
+
+.image-grid img {
+  max-width: 100%;
+  height: auto;
+}
+
+.work-images summary {
+  list-style-position: inside;
+}
+
+.work-images details {
+  margin-top: 1rem;
+}
+
+.work-images summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+}
+
+.work-images summary::-webkit-details-marker {
+  display: none;
+}
+
+.work-images summary::before {
+  content: " ▶";
+  font-size: 1em;
+}
+
+.work-images details[open] summary::before {
+  content: " ▼";
+}
+
+.work-title {
+  margin-bottom: 0.3em;
+}
+
+.work-github {
+  margin: 0;
+}
+
+.work-itch {
+  margin: 0;
+}
+
+.links a,
+.links span.email {
+  display: inline; /* ensure span stays inline */
+  margin: 0;
+  padding: 0;
+}
+
+.work-title {
+  text-decoration: underline;
+}
+
+.work-github,
+.work-itch,
+.work-about,
+.work-skills,
+.work-images {
+  margin-left: 1.2rem; /* adjust to taste */
+}
+
 /* Responsive */
 @media (max-width:880px){
   .site{ padding:12px; }
@@ -278,4 +346,10 @@ body{
   .carousel-viewport{ padding:0px 0px; }
   .carousel-prev{ left:4px; }
   .carousel-next{ right:4px; }
+}
+
+@media (max-width: 600px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
 }

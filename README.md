@@ -46,3 +46,5 @@ _Please note that my portfolio and this readme are currently still 'under constr
 [![](https://github-readme-stats.vercel.app/api/top-langs?username=PycraftDeveloper&show_icons=true&locale=en&layout=compact&theme=radical)]()
 
  </div>
+
+ ![Stats](./profile/stats.svg)

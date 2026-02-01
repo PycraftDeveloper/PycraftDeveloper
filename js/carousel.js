@@ -8,17 +8,22 @@ document.addEventListener('DOMContentLoaded', function () {
     {
       title: "PMMA - Python Multi-Media API",
       subtitle: "(Click to find out more)",
-      image: "images/pmma.jpg"
+      image: "images/Featured/pmma.jpg"
     },
     {
-      title: "Gourmet Heaven",
+      title: "Ghouls and Gold",
       subtitle: "(Click to find out more)",
-      image: "images/gourmet_heaven.jpg"
+      image: "images/Featured/ghouls_and_gold.jpg"
     },
     {
       title: "How To Train Your Dragon Game",
       subtitle: "(Click to find out more)",
-      image: "images/httyd_game.jpg"
+      image: "images/Featured/httyd_game.jpg"
+    },
+    {
+      title: "Gourmet Heaven",
+      subtitle: "(Click to find out more)",
+      image: "images/Featured/gourmet_heaven.jpg"
     }
   ];
 

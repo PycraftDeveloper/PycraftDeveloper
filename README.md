@@ -13,7 +13,7 @@
 
 I'm a BSc Games Programming student (2nd year) at the University of Northampton. To see what I've been up to, [check out my portfolio](https://pycraftdeveloper.github.io/PycraftDeveloper/)! I am also working on my own graphics and multi-media API, [PMMA](https://github.com/PycraftDeveloper/PMMA) as well as [my other programming projects](https://github.com/PycraftDeveloper?tab=repositories). I spend my free time walking, cycling or gaming!
 
-_Please note that my portfolio and this readme are currently still 'under construction' until the 1st of February!_
+_Please note that my portfolio and this readme under continuous review!_
 
 ## 🛠 &nbsp;Tech Stack
 

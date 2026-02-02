@@ -8,22 +8,26 @@ document.addEventListener('DOMContentLoaded', function () {
     {
       title: "PMMA - Python Multi-Media API",
       subtitle: "(Click to find out more)",
-      image: "images/Featured/pmma.jpg"
+      image: "images/Featured/pmma.jpg",
+      target: "#pmma"
     },
     {
       title: "Ghouls and Gold",
       subtitle: "(Click to find out more)",
-      image: "images/Featured/ghouls_and_gold.jpg"
+      image: "images/Featured/ghouls_and_gold.jpg",
+      target: "#Ghouls-And-Gold"
     },
     {
       title: "How To Train Your Dragon Game",
       subtitle: "(Click to find out more)",
-      image: "images/Featured/httyd_game.jpg"
+      image: "images/Featured/httyd_game.jpg",
+      target: "#httyd-game"
     },
     {
       title: "Gourmet Heaven",
       subtitle: "(Click to find out more)",
-      image: "images/Featured/gourmet_heaven.jpg"
+      image: "images/Featured/gourmet_heaven.jpg",
+      target: "#gourmet-heaven"
     }
   ];
 
@@ -50,6 +54,15 @@ document.addEventListener('DOMContentLoaded', function () {
     slide.setAttribute('aria-roledescription', 'slide');
     slide.setAttribute('aria-label', `${i + 1} of ${slidesData.length}`);
     slide.setAttribute('data-index', i);
+
+    slide.addEventListener('click', () => {
+      const target = slidesData[i].target;
+      if (target) {
+        document.querySelector(target).scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
 
     const overlay = document.createElement('div');
     overlay.className = 'slide-overlay';
@@ -198,4 +211,21 @@ document.addEventListener('DOMContentLoaded', function () {
   window.__portfolioCarousel = {
     moveTo, next, prev, getCurrent: () => current, recalc: () => setSizes(false)
   };
+});
+
+const backToTop = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTop.classList.add('visible');
+  } else {
+    backToTop.classList.remove('visible');
+  }
+});
+
+backToTop.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 });

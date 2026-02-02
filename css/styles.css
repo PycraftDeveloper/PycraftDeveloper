@@ -318,6 +318,38 @@ body{
   margin-left: 1.2rem; /* adjust to taste */
 }
 
+.emphasis {
+  font-weight: 600;
+  color: #333; /* or your palette */
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: #333;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+#backToTop.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* Responsive */
 @media (max-width:880px){
   .site{ padding:12px; }

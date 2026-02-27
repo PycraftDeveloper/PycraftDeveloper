@@ -15,7 +15,16 @@ I'm a BSc Games Programming student (2nd year) at the University of Northampton.
 
 _Please note that my portfolio and this readme under continuous review!_
 
-## 🛠 &nbsp;Tech Stack
+## 📢 Announcements
+
+Hi all, I'm a second-year Games Programming student at the University of Northampton 👋 </br>
+Could I please get some responses on this questionnaire for my Indie Game Development module assignment?
+
+The questionnaire looks briefly at your opinions on gaming and asks for feedback and opinions on the game I am making for this module! Your responses will help with part of the written work for this assignment, and I would be very grateful if you could take a look. The questionnaire should only take a few minutes to complete. Thanks!
+
+https://forms.office.com/e/0zBYXKYSPW
+
+## 🛠 Tech Stack
 
 | Programming Languages | Engines | Frameworks & Libraries | Software Development Tools | Platforms |
 |---|---|---|---|---|

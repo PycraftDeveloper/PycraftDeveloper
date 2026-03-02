@@ -64,13 +64,12 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
-    const overlay = document.createElement('div');
-    overlay.className = 'slide-overlay';
-    slide.appendChild(overlay);
-
     const info = document.createElement('div');
     info.className = 'slide-info';
-    info.innerHTML = `<div>${s.title}</div><div style="font-weight:400;font-size:18px;margin-top:6px;font-style:italic;">${s.subtitle}</div>`;
+    info.innerHTML = `
+      <div class="slide-title">${s.title}</div>
+      <div class="slide-subtitle">${s.subtitle}</div>
+      `;
     slide.appendChild(info);
 
     track.appendChild(slide);

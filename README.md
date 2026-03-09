@@ -17,12 +17,15 @@ _Please note that my portfolio and this readme under continuous review!_
 
 ## 📢 Announcements
 
-Hi all, I'm a second-year Games Programming student at the University of Northampton 👋 </br>
-Could I please get some responses on this questionnaire for my Indie Game Development module assignment?
+Hello!
+As a student at the University of Northampton, each year we get the opportunity to work on a group game project. Last year my group produced the game Gourmet Heaven, and after fixing some rough edges, we are in the final stages of publishing the game to the Google Play store!
 
-The questionnaire looks briefly at your opinions on gaming and asks for feedback and opinions on the game I am making for this module! Your responses will help with part of the written work for this assignment, and I would be very grateful if you could take a look. The questionnaire should only take a few minutes to complete. Thanks!
+The final step to achieve this is to get some testers to play the game. If anyone would be interested in participating with this and helping to get the game published to Google Play, can you drop me a message?
+(This process is only available for Android users)
 
-https://forms.office.com/e/0zBYXKYSPW
+The process starts with an email invitation to download the game, and then for the next 14 days you will need to open the game each day and play it for a few minutes.
+
+You can also find Gourmet Heaven on Itch: https://lnkd.in/eXfKbdVh
 
 ## 🛠 Tech Stack
 

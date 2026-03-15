@@ -18,6 +18,56 @@ body{
   line-height:1.4;
 }
 
+.hero-overlay {
+  animation: fadeUp 1.2s ease;
+}
+
+.hero{
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: visible;
+}
+
+/* Video background */
+.hero-video{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transform:translate(-50%,-50%);
+  z-index:0;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  height:200px;
+
+  background:linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1.0),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .site{
   max-width:var(--max-width);
   margin:0 auto;
@@ -32,18 +82,29 @@ body{
   margin-bottom:18px;
 }
 
+.profile-meta{
+  text-align:center;
+
+  max-width:900px;
+  margin:auto;
+  margin-top: calc(160px / 2 + 20px); /* half avatar + extra spacing */
+}
+
 .avatar{
-  flex:0 0 160px;
+  position:absolute;          /* important */
+  left:50%;
+  transform:translateX(-50%);
+  bottom:-70px;
+
   width:160px;
   height:160px;
+
   border-radius:50%;
   overflow:hidden;
-  border:3px solid #222;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  border:4px solid white;
   background:var(--accent);
-  aspect-ratio: 1/1;
+
+  z-index:10;                  /* ensures it sits above video */
 }
 
 .avatar img{
@@ -51,6 +112,8 @@ body{
   height:100%;
   object-fit:cover;
   display:block;
+
+  box-shadow:0 12px 35px rgba(0,0,0,0.4);
 }
 
 /* Meta */

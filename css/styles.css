@@ -181,6 +181,10 @@ body{
   margin-bottom:32px;
 }
 
+.section-subtitle{
+  text-align:center;
+}
+
 .carousel{
   position:relative;
   border:3px solid rgb(80, 80, 80);

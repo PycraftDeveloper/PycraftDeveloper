@@ -3,28 +3,11 @@ Banner Video DMs: (1200, 420) px
 */
 
 :root{
-  --bg:rgb(30, 30, 30);
-  --text:rgb(255, 255, 255);
-  --muted:rgb(153, 153, 153);
+  --bg:rgb(255, 255, 255);
+  --text:rgb(0, 0, 0);
+  --muted:rgb(102, 102, 102);
   --max-width:1200px;
 }
-
-a {
-  color: rgb(0, 150, 255);        /* default link colour */
-}
-
-a:visited {
-  color: rgb(255, 81, 255);      /* after the link has been visited */
-}
-
-a:hover {
-  color: rgb(0, 100, 255);         /* when the mouse is over it */
-}
-
-a:active {
-  color: rgb(0, 50, 255);      /* when the link is being clicked */
-}
-
 
 *{box-sizing:border-box}
 html,body{height:100%}
@@ -71,9 +54,9 @@ body{
 
   background:linear-gradient(
     to top,
-    rgba(30, 30, 30, 1.0),
-    rgba(30, 30, 30, 0.3),
-    rgba(30, 30, 30, 0)
+    rgba(255, 255, 255, 1.0),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0)
   );
 }
 
@@ -122,7 +105,7 @@ body{
 
   border-radius:50%;
   overflow:hidden;
-  border:4px solid rgb(30, 30, 30);
+  border:4px solid rgb(255, 255, 255);
   background:var(--accent);
 
   z-index:10;                  /* ensures it sits above video */
@@ -187,7 +170,7 @@ body{
 
 .carousel{
   position:relative;
-  border:3px solid rgb(80, 80, 80);
+  border:3px solid rgb(0);
   background:transparent;
   overflow:visible; /* arrows sit outside viewport */
   height: 50vh;
@@ -294,7 +277,7 @@ body{
   width:12px;
   height:12px;
   border-radius:50%;
-  border:2px solid rgb(80, 80, 80);
+  border:2px solid rgb(0, 0, 0);
   background:transparent;
   cursor:pointer;
   box-sizing: border-box;
@@ -311,7 +294,7 @@ body{
 }
 
 .carousel-dot.active{
-  background:rgb(80, 80, 80);
+  background:rgb(0, 0, 0);
 }
 
 /* arrows */
@@ -332,7 +315,7 @@ body{
 .carousel-prev{ left:8px; }
 .carousel-next{ right:8px; }
 
-.carousel-nav svg{ filter:drop-shadow(0 2px 0 rgba(80, 80, 80, 0.5)); }
+.carousel-nav svg{ filter:drop-shadow(0 2px 0 rgba(0, 0, 0, 0.5)); }
 
 /* Smaller decorative caption inside slide (like subtext) */
 .slide-info{
@@ -422,7 +405,7 @@ body{
 
 .emphasis {
   font-weight: 600;
-  color: rgb(153, 153, 153); /* or your palette */
+  color: rgb(102, 102, 102); /* or your palette */
 }
 
 #backToTop {
@@ -433,7 +416,7 @@ body{
   height: 48px;
   border-radius: 50%;
   border: none;
-  background: #333;
+  background: #000000;
   color: white;
   font-size: 24px;
   cursor: pointer;

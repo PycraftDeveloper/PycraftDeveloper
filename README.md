@@ -15,17 +15,7 @@ I'm a BSc Games Programming student (2nd year) at the University of Northampton.
 
 _Please note that my portfolio and this readme under continuous review!_
 
-## 📢 Announcements
-
-Hello!
-As a student at the University of Northampton, each year we get the opportunity to work on a group game project. Last year my group produced the game Gourmet Heaven, and after fixing some rough edges, we are in the final stages of publishing the game to the Google Play store!
-
-The final step to achieve this is to get some testers to play the game. If anyone would be interested in participating with this and helping to get the game published to Google Play, can you drop me a message?
-(This process is only available for Android users)
-
-The process starts with an email invitation to download the game, and then for the next 14 days you will need to open the game each day and play it for a few minutes.
-
-You can also find Gourmet Heaven on Itch: https://lnkd.in/eXfKbdVh
+<!-- ## 📢 Announcements -->
 
 ## 🛠 Tech Stack
 
@@ -33,7 +23,7 @@ You can also find Gourmet Heaven on Itch: https://lnkd.in/eXfKbdVh
 |---|---|---|---|---|
 | ![Python](https://img.shields.io/badge/Python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)  ![C#](https://img.shields.io/badge/C%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white) | ![Unity](https://img.shields.io/badge/Unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white) ![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-%23313131.svg?style=for-the-badge&logo=unrealengine&logoColor=white) | ![OpenGL](https://img.shields.io/badge/OpenGL-%23FFFFFF.svg?style=for-the-badge&logo=opengl) ![Numpy](https://img.shields.io/badge/NumPy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) | ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white) | ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white) |
 
-## 🔗 &nbsp;Contact Me
+## 🔗 Contact Me
 
 <div align="center">
 <a href="mailto:thomasjebbo@gmail.com"><img alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>

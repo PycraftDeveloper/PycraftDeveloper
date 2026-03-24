@@ -187,36 +187,35 @@ body{
 
 .carousel{
   position:relative;
-  border:3px solid rgb(0, 0, 0);
   background:transparent;
   overflow:visible; /* arrows sit outside viewport */
-  height: 75vh;
-  border-radius:16px;
+  max-height: 75vh;
   max-width: 1200px;
   width: 80vw;
   aspect-ratio: 16 / 9;
   margin: 0 auto;
 }
 
+.carousel-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  max-height: 75vh;
+  border-radius: 20px;
+  border: 3px solid black;
+  overflow: hidden;
+  background: transparent;
+}
+
 /* The viewport defines the visible area and gutters for padding */
 .carousel-viewport{
-  overflow:hidden;
   height: 100%;
-  border-radius:12px;
 }
 
 /* track slides horizontally inside viewport */
-.carousel-track{
-  position:relative;
-  height:100%;
-  display:flex;
-  transition:transform 480ms cubic-bezier(.22,.9,.2,1);
-  touch-action:pan-y;
-  align-items:center;
-  justify-content:flex-start;
-  gap:0;
-  min-height: 100%;
-  border-radius:12px;
+.carousel-track {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .PMMA{
@@ -267,26 +266,25 @@ body{
   border-radius:12px;
 }
 
-.slide-info{
-  position:absolute;
-  left:20px;
-  bottom:20px;
+.slide-info {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%);
 
-  color:#fff;
-  font-weight:700;
-  font-size:28px;
-  z-index:2;
+  color: #fff;
+  z-index: 2;
 
-  background:rgba(0,0,0,0.65);
-  padding:16px 20px;
-  border-radius:16px;
-
+  background: rgba(0,0,0,0.65);
+  padding: 16px 20px;
+  border-radius: 16px;
   backdrop-filter: blur(4px);
 }
 
 .slide-title{
   font-size:20px;
   font-weight:700;
+  text-align: center;
 }
 
 .slide-subtitle{
@@ -295,6 +293,27 @@ body{
   margin-top:6px;
   font-weight:400;
   opacity:0.9;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .slide-title {
+    font-size: 15px;
+  }
+
+  .slide-subtitle{
+  font-size:10px;
+}
+}
+
+@media (max-width: 600px) {
+  .slide-title {
+    font-size: 10px;
+  }
+
+  .slide-subtitle{
+  font-size:5px;
+}
 }
 
 /* caption bottom-left */
@@ -367,17 +386,6 @@ body{
 .carousel-next{ right:8px; }
 
 .carousel-nav svg{ filter:drop-shadow(0 2px 0 rgba(0, 0, 0, 0.5)); }
-
-/* Smaller decorative caption inside slide (like subtext) */
-.slide-info{
-  position:absolute;
-  left:10px;
-  bottom:10px;
-  color:rgb(255, 255, 255);
-  font-weight:700;
-  font-size:28px;
-  z-index: 2;
-}
 
 /* All works */
 .all-works .work{

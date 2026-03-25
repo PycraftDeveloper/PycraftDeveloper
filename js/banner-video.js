@@ -1,7 +1,7 @@
 // js/banner-video.js
 
 // Total number of videos in your folder
-const totalVideos = 2; // change this to match your video count
+const totalVideos = 3; // change this to match your video count
 
 const videoElement = document.getElementById('heroVideo');
 

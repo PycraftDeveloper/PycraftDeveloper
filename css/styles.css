@@ -307,6 +307,7 @@ body{
 
   .slide-info {
     padding: 11px 11px;
+    bottom: 11px;
   }
 }
 
@@ -321,6 +322,7 @@ body{
 
   .slide-info {
     padding: 6px 6px;
+    bottom: 6px;
     border-radius: 5px;
   }
 }

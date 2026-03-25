@@ -97,8 +97,8 @@ body{
   transform:translateX(-50%);
   bottom:-70px;
 
-  width: clamp(80px, 12vw, 160px);
-  height: clamp(80px, 12vw, 160px);
+  width: clamp(100px, 12vw, 160px);
+  height: clamp(100px, 12vw, 160px);
 
   border-radius:50%;
   overflow:hidden;
@@ -302,8 +302,12 @@ body{
   }
 
   .slide-subtitle{
-  font-size:10px;
-}
+    font-size:10px;
+  }
+
+  .slide-info {
+    padding: 11px 11px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -312,8 +316,13 @@ body{
   }
 
   .slide-subtitle{
-  font-size:5px;
-}
+    font-size:5px;
+  }
+
+  .slide-info {
+    padding: 6px 6px;
+    border-radius: 5px;
+  }
 }
 
 /* caption bottom-left */

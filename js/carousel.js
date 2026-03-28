@@ -12,6 +12,12 @@ document.addEventListener('DOMContentLoaded', function () {
       target: "#pmma"
     },
     {
+      title: "Gourmet Heaven",
+      subtitle: "(Click to find out more)",
+      image: "images/Featured/gourmet_heaven.jpg",
+      target: "#gourmet-heaven"
+    },
+    {
       title: "Ghouls and Gold",
       subtitle: "(Click to find out more)",
       image: "images/Featured/ghouls_and_gold.jpg",
@@ -22,12 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
       subtitle: "(Click to find out more)",
       image: "images/Featured/httyd_game.jpg",
       target: "#httyd-game"
-    },
-    {
-      title: "Gourmet Heaven",
-      subtitle: "(Click to find out more)",
-      image: "images/Featured/gourmet_heaven.jpg",
-      target: "#gourmet-heaven"
     }
   ];
 

@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
       title: "PMMA - Python Multi-Media API",
       subtitle: "(Click to find out more)",
       image: "images/Featured/pmma.jpg",
-      target: "#pmma"
+      target: "#PMMA"
     },
     {
       title: "Gourmet Heaven",

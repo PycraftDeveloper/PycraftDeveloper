@@ -442,6 +442,11 @@ body{
   content: " ▼";
 }
 
+.work-see-more {
+  margin-top: 12px;
+  text-align: center;
+}
+
 .work-title {
   margin-bottom: 0.3em;
   text-align: center;

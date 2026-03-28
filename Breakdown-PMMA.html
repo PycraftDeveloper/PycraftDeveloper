@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Thomas Jebson - PMMA</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles-breakdown.css">
+  <link rel="icon" href="images/avatar.jpg" type="image/jpeg">
+</head>
+
+<body>
+  <main class="site">
+    <div class="logo">
+      <img src="images/All Works/PMMA/logo.jpg" alt="PMMA Logo">
+    </div>
+    <h1 class="name">Python Multi-Media API (PMMA)</h1>
+    <div class="subtitle">
+      By Thomas Jebson
+    </div>
+    <div class="date">
+      <i>(2024 - Currently In Development)</i>
+    </div>
+    <div class="back">
+      <a href="index.html#PMMA">Back to portfolio</a>
+    </div>
+    <div class="topics">
+      <a href="https://www.python.org/" target="_blank">Python</a> | <a href="https://isocpp.org/"
+        target="_blank">C++</a> | <a href="https://cython.org/" target="_blank">Cython</a> | <a
+        href="https://cmake.org/" target="_blank">CMake</a> | <a href="https://github.com/bkaradzic/bgfx"
+        target="_blank">BGFX</a> | <a href="https://pypi.org/project/pmma/" target="_blank">Python Packaging</a>
+    </div>
+    </br>
+    <h2 class="section-title">About</h2>
+    <div class="details">
+      PMMA is a currently in development Python library that provides a
+      high-level interface for developing multi-media applications.</br></br>
+
+
+      PMMA achieves this by providing a variety of sub-components that
+      handle different aspects of multi-media application development,
+      such as 2D graphics rendering, audio processing, input handling,
+      and more. Each sub-component is designed to be modular and extensible,
+      allowing developers to easily integrate them into their projects
+      and customize them to fit their specific needs. Furthermore,
+      careful attention has been given to ensure each sub-component is
+      highly-optimised, with large portions of the API being written in
+      C++ and a Python interface provided by Cython to ensure maximal
+      performance.</br></br>
+
+
+      The philosophy behind PMMA is to provide a simple and intuitive API
+      developers can use to quickly start developing their applications
+      without needing to worry about optimising how their code interacts
+      with PMMA. A good example of this is PMMA's dynamic batching of
+      draw calls in the rendering API. This allows multiple shapes to be
+      rendered with a single draw call - significantly improving performance
+      whilst being completely transparent to the end developer.
+    </div>
+
+    <h2 class="section-title">Performance</h2>
+    <div class="performance">
+      With PMMA being described as a 'highly optimised API' in my portfolio,
+      I thought it would be useful to provide some insight into the
+      performance of PMMA and how it compares to other similar libraries.</br></br>
+
+      <i>These tests were performed on a Windows 11 machine with an AMD
+        Ryzen 7 5800X CPU, 32 GB of RAM and an AMD Radeon RX 7700 XT GPU.</i></br>
+
+      Below are some results comparing PMMA's rendering performance to
+      Pygame and Pyglet in Python 3.10. Pygame and Pyglet were chosen for
+      comparison as they are two of the most popular Python libraries for
+      2D graphics rendering currently.
+
+      In this test, one hundred thousand (100, 000) color changing circles
+      are rendered to the screen every frame, with the average frames
+      per second (FPS) being recorded across 50 frames, with the results being as follows:</br></br>
+      <div class="graph">
+        <img src="images/All Works/PMMA/benchmark_one.jpg" alt="Benchmark One Graph">
+      </div>
+
+      As can be seen from the graph, PMMA significantly outperforms both
+      Pygame and Pyglet in this test. Whilst not a direct indication of
+      simplicity, PMMA achieved this in: 34 lines of code, compared to 78 for Pygame
+      and 67 for Pyglet.
+
+      That test was performed on the latest released version of PMMA (v5.0.16)
+      the currently in development version of PMMA (v5.1.0) further optimises the
+      rendering API and also exposes better the C++ API, allowing for PMMA to
+      be used in both Python, Cython and C++ projects. This same test was performed
+      in C++ comparing PMMA against SFML and the results were as follows:</br></br>
+      <div class="graph">
+        <img src="images/All Works/PMMA/benchmark_two.jpg" alt="Benchmark Two Graph">
+      </div>
+    </div>
+  </main>
+  <button id="backToTop" aria-label="Back to top">▲</button>
+</body>
+
+</html>

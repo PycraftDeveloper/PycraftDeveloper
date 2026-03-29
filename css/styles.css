@@ -119,7 +119,7 @@ body{
   object-fit:cover;
   display:block;
 
-  box-shadow:0 12px 35px rgba(0,0,0,0.4);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
 }
 
 .name{
@@ -194,6 +194,7 @@ body{
   width: 80vw;
   aspect-ratio: 16 / 9;
   margin: 0 auto;
+  margin-bottom: 40px;
 }
 
 .carousel-frame {
@@ -204,6 +205,7 @@ body{
   border: 3px solid black;
   overflow: hidden;
   background: transparent;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
 }
 
 /* The viewport defines the visible area and gutters for padding */
@@ -220,32 +222,50 @@ body{
 
 .PMMA{
   background: rgb(225, 225, 225);
-  box-shadow: 0 2px 6px rgba(0,0, 0, 0.5)
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+  margin-bottom: 40px;
+  border-radius: 20px;
+  border: 3px solid black;
 }
 
 .Ghouls-And-Gold{
   background: rgb(225, 225, 225);
-  box-shadow: 0 2px 6px rgba(0,0, 0, 0.5)
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+  margin-bottom: 40px;
+  border-radius: 20px;
+  border: 3px solid black;
 }
 
 .httyd-game{
   background: rgb(225, 225, 225);
-  box-shadow: 0 2px 6px rgba(0,0, 0, 0.5)
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+  margin-bottom: 40px;
+  border-radius: 20px;
+  border: 3px solid black;
 }
 
 .gourmet-heaven {
   background: rgb(225, 225, 225);
-  box-shadow: 0 2px 6px rgba(0,0, 0, 0.5)
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+  margin-bottom: 40px;
+  border-radius: 20px;
+  border: 3px solid black;
 }
 
 .Game_1942 {
   background: rgb(225, 225, 225);
-  box-shadow: 0 2px 6px rgba(0,0, 0, 0.5)
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+  margin-bottom: 40px;
+  border-radius: 20px;
+  border: 3px solid black;
 }
 
 .laames {
   background: rgb(225, 225, 225);
-  box-shadow: 0 2px 6px rgba(0,0, 0, 0.5)
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+  margin-bottom: 40px;
+  border-radius: 20px;
+  border: 3px solid black;
 }
 
 /* each slide is exactly one viewport width */

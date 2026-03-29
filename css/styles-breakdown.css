@@ -81,7 +81,7 @@ body{
 
 .graph img {
   display: block;      /* removes inline gap */
-  max-width: 50vw;     /* scales with parent width */
+  max-height: 50vh;     /* scales with parent width */
   height: auto;        /* keeps aspect ratio */
   border: 3px solid black;
   border-radius: 20px;

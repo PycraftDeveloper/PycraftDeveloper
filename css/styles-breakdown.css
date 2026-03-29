@@ -81,13 +81,15 @@ body{
 
 .graph img {
   display: block;      /* removes inline gap */
-  max-height: 50vh;     /* scales with parent width */
   height: auto;        /* keeps aspect ratio */
   border: 3px solid black;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 12px 35px rgba(0,0,0,0.4);
   margin-bottom: 40px;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
 }
 
 .points{

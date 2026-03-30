@@ -52,6 +52,13 @@ body{
   text-align: center;
 }
 
+.logo img{
+  height: 256px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+}
+
 .date{
   text-align: center;
 }
@@ -61,6 +68,10 @@ body{
 }
 
 .topics{
+  text-align: center;
+}
+
+.links{
   text-align: center;
 }
 
@@ -79,7 +90,27 @@ body{
   justify-content: center; /* horizontal centering */
 }
 
+.demo-image {
+  /* Make sure the container can shrink/grow */
+  max-width: 100%;
+  display: flex;
+  justify-content: center; /* horizontal centering */
+}
+
 .graph img {
+  display: block;      /* removes inline gap */
+  height: auto;        /* keeps aspect ratio */
+  border: 3px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+
+.demo-image img {
   display: block;      /* removes inline gap */
   height: auto;        /* keeps aspect ratio */
   border: 3px solid black;

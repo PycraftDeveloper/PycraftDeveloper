@@ -48,12 +48,15 @@ body{
   margin:0 6px;
 }
 
-.logo{
+.logo {
   text-align: center;
 }
 
-.logo img{
-  height: 256px;
+.logo img {
+  width: 100%;        /* allows shrinking on small screens */
+  height: auto;       /* keeps aspect ratio */
+  max-height: 256px;  /* never exceed 256px tall */
+  max-width: 256px;   /* optional: prevents it from getting too wide */
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 12px 35px rgba(0,0,0,0.4);
@@ -90,13 +93,6 @@ body{
   justify-content: center; /* horizontal centering */
 }
 
-.demo-image {
-  /* Make sure the container can shrink/grow */
-  max-width: 100%;
-  display: flex;
-  justify-content: center; /* horizontal centering */
-}
-
 .graph img {
   display: block;      /* removes inline gap */
   height: auto;        /* keeps aspect ratio */
@@ -110,17 +106,29 @@ body{
   height: auto;
 }
 
-.demo-image img {
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(800px, max-content));
+  gap: 3rem;
+  justify-content: center;
+}
+
+.image-grid img {
   display: block;      /* removes inline gap */
   height: auto;        /* keeps aspect ratio */
   border: 3px solid black;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 12px 35px rgba(0,0,0,0.4);
-  margin-bottom: 40px;
   width: 100%;
   max-width: 800px;
   height: auto;
+}
+
+@media (max-width: 900px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .points{

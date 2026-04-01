@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
       title: "Gourmet Heaven",
       subtitle: "(Click to find out more)",
       image: "images/Featured/gourmet_heaven.jpg",
-      target: "#gourmet-heaven"
+      target: "#Gourmet-Heaven"
     },
     {
       title: "Ghouls and Gold",

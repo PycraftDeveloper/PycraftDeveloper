@@ -5,7 +5,17 @@ Banner Video DMs: (1200, 420) px
 :root{
   --bg:rgb(255, 255, 255);
   --text:rgb(0, 0, 0);
+  --accent: rgb(37, 85, 174);
   --muted:rgb(102, 102, 102);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root{
+      --bg: rgb(30, 30, 30);
+      --text: rgb(255, 255, 255);
+      --muted:rgb(153, 153, 153);
+      --accent: rgb(70, 122, 218);
+    }
 }
 
 *{box-sizing:border-box}
@@ -18,6 +28,12 @@ body{
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   line-height:1.4;
+}
+
+.site{
+  max-width: 1200px;
+  margin:0 auto;
+  padding:18px;
 }
 
 .hero{
@@ -37,7 +53,7 @@ body{
   transform:translate(-50%,-50%);
   z-index:0;
 
-  border:4px solid rgb(0, 0, 0);
+  border:4px solid var(--accent);
   border-radius:12px;
 }
 
@@ -60,12 +76,6 @@ body{
   to {
     opacity: 1;
   }
-}
-
-.site{
-  max-width:var(--max-width);
-  margin:0 auto;
-  padding:18px;
 }
 
 /* Profile header */
@@ -102,8 +112,7 @@ body{
 
   border-radius:50%;
   overflow:hidden;
-  border:4px solid rgb(0, 0, 0);
-  background:var(--accent);
+  border:4px solid var(--accent);
 
   z-index:10;                  /* ensures it sits above video */
 }
@@ -202,7 +211,7 @@ body{
   aspect-ratio: 16 / 9;
   max-height: 75vh;
   border-radius: 20px;
-  border: 3px solid black;
+  border: 3px solid var(--accent);
   overflow: hidden;
   background: transparent;
   box-shadow: 0 12px 35px rgba(0,0,0,0.4);
@@ -220,52 +229,17 @@ body{
   align-items: center;
 }
 
-.PMMA{
-  background: rgb(225, 225, 225);
-  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
-  margin-bottom: 40px;
-  border-radius: 20px;
-  border: 3px solid black;
-}
-
-.Ghouls-And-Gold{
-  background: rgb(225, 225, 225);
-  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
-  margin-bottom: 40px;
-  border-radius: 20px;
-  border: 3px solid black;
-}
-
-.httyd-game{
-  background: rgb(225, 225, 225);
-  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
-  margin-bottom: 40px;
-  border-radius: 20px;
-  border: 3px solid black;
-}
-
-.gourmet-heaven {
-  background: rgb(225, 225, 225);
-  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
-  margin-bottom: 40px;
-  border-radius: 20px;
-  border: 3px solid black;
-}
-
-.Game_1942 {
-  background: rgb(225, 225, 225);
-  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
-  margin-bottom: 40px;
-  border-radius: 20px;
-  border: 3px solid black;
-}
-
+.PMMA,
+.Ghouls-And-Gold,
+.httyd-game,
+.gourmet-heaven,
+.Game_1942,
 .laames {
-  background: rgb(225, 225, 225);
+  background: var(--bg);
   box-shadow: 0 12px 35px rgba(0,0,0,0.4);
   margin-bottom: 40px;
   border-radius: 20px;
-  border: 3px solid black;
+  border: 3px solid var(--accent);
 }
 
 /* each slide is exactly one viewport width */
@@ -276,7 +250,6 @@ body{
   display:flex;
   align-items: center;
   justify-content: center;
-  color:#fff;
   background-size:cover;        /* fill width */
   background-position:center;   /* center vertically */
   background-repeat:no-repeat;
@@ -359,7 +332,6 @@ body{
 
 .carousel-caption{
   font-size:28px;
-  color:#07112a;
   font-weight:500;
   display:none
 }
@@ -378,7 +350,7 @@ body{
   width:12px;
   height:12px;
   border-radius:50%;
-  border:2px solid rgb(0, 0, 0);
+  border:2px solid var(--accent);
   background:transparent;
   cursor:pointer;
   box-sizing: border-box;
@@ -395,7 +367,7 @@ body{
 }
 
 .carousel-dot.active{
-  background:rgb(0, 0, 0);
+  background:var(--accent);
 }
 
 /* arrows */
@@ -508,7 +480,7 @@ body{
 
 .emphasis {
   font-weight: 600;
-  color: rgb(102, 102, 102); /* or your palette */
+  color: var(--muted); /* or your palette */
 }
 
 #backToTop {
@@ -539,37 +511,16 @@ body{
   pointer-events: auto;
 }
 
-/*
-@media (max-width:880px){
-  .site{ padding:12px; }
-  .profile{
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-  }
-  .profile-meta{ width:100% }
-  .name{ font-size:28px }
-  .skills{ font-size:16px }
-  .carousel-viewport{
-    padding:8px 20px;
-  }
-  .carousel-track{ height:220px; }
-  .carousel-caption{ font-size:20px; }
-  .slide-info{ font-size:20px; left:14px; bottom:14px; }
+@media (prefers-color-scheme: light) {
+    #backToTop {
+      color: rgb(255, 255, 255);
+      background: rgba(0, 0, 0, 0.65);
+    }
 }
 
-@media (max-width:480px){
-  .carousel-track{ height:180px; }
-  .carousel-caption{ font-size:18px; }
-  .site{ padding:10px; }
-  .carousel-viewport{ padding:0px 0px; }
-  .carousel-prev{ left:4px; }
-  .carousel-next{ right:4px; }
+@media (prefers-color-scheme: dark) {
+    #backToTop {
+      color: rgb(0, 0, 0);
+      background: rgba(255, 255, 255, 0.65);
+    }
 }
-
-@media (max-width: 600px) {
-  .image-grid {
-    grid-template-columns: 1fr;
-  }
-}
-*/

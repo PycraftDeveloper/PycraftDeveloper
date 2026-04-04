@@ -185,6 +185,7 @@ body{
   border:4px solid var(--accent);
   border-radius:12px;
   padding: 6px;
+  background-color: rgb(255, 255, 255);
 }
 
 .skill-icon {

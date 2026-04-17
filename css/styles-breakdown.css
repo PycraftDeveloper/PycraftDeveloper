@@ -6,6 +6,16 @@ Banner Video DMs: (1200, 420) px
   --bg:rgb(255, 255, 255);
   --text:rgb(0, 0, 0);
   --muted:rgb(102, 102, 102);
+  --accent: rgb(0, 0, 128);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root{
+      --bg: rgb(30, 30, 30);
+      --text: rgb(255, 255, 255);
+      --muted:rgb(153, 153, 153);
+      --accent: rgb(70, 122, 218);
+    }
 }
 
 *{box-sizing:border-box}
@@ -100,7 +110,7 @@ body{
 .graph img {
   display: block;      /* removes inline gap */
   height: auto;        /* keeps aspect ratio */
-  border: 3px solid black;
+  border: 2px solid var(--accent);
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 12px 35px rgba(0,0,0,0.4);
@@ -120,13 +130,53 @@ body{
 .image-grid img {
   display: block;      /* removes inline gap */
   height: auto;        /* keeps aspect ratio */
-  border: 3px solid black;
+  border: 2px solid var(--accent);
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 12px 35px rgba(0,0,0,0.4);
   width: 100%;
   max-width: 800px;
   height: auto;
+}
+
+.skills{
+  margin: 0 auto;
+  font-weight:300;
+
+  width: fit-content;
+  text-align: center;
+
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+  border:2px solid var(--accent);
+  border-radius:12px;
+  padding: 6px;
+  background-color: var(--bg);
+}
+
+.skill-icon {
+  width: 2em;
+  height: auto;
+  vertical-align: text-bottom;
+}
+
+.platforms{
+  margin: 0 auto;
+  font-weight:300;
+
+  width: fit-content;
+  text-align: center;
+
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+  border:2px solid var(--accent);
+  border-radius:12px;
+  padding: 6px;
+  background-color: var(--bg);
+}
+
+.platform-icon {
+  width: 2em;
+  height: auto;
+  vertical-align: text-bottom;
 }
 
 @media (max-width: 900px) {

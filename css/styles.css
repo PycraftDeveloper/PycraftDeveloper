@@ -5,8 +5,7 @@ Banner Video DMs: (1200, 420) px
 :root{
   --bg:rgb(255, 255, 255);
   --text:rgb(0, 0, 0);
-  /*--accent: rgb(37, 85, 174);*/
-  --accent: rgb(0, 0, 0);
+  --accent: rgb(0, 0, 128);
   --muted:rgb(102, 102, 102);
 }
 
@@ -15,8 +14,7 @@ Banner Video DMs: (1200, 420) px
       --bg: rgb(30, 30, 30);
       --text: rgb(255, 255, 255);
       --muted:rgb(153, 153, 153);
-      /*--accent: rgb(70, 122, 218);*/
-      --accent: rgb(255, 255, 255);
+      --accent: rgb(70, 122, 218);
     }
 }
 
@@ -55,7 +53,7 @@ body{
   transform:translate(-50%,-50%);
   z-index:0;
 
-  border:4px solid var(--accent);
+  border:2px solid var(--accent);
   border-radius:12px;
   box-shadow: 0 12px 35px rgba(0,0,0,0.4);
 }
@@ -115,7 +113,7 @@ body{
 
   border-radius:50%;
   overflow:hidden;
-  border:4px solid var(--accent);
+  border:2px solid var(--accent);
 
   z-index:10;                  /* ensures it sits above video */
   box-shadow: 0 12px 35px rgba(0,0,0,0.4);
@@ -182,10 +180,10 @@ body{
   text-align: center;
 
   box-shadow: 0 12px 35px rgba(0,0,0,0.4);
-  border:4px solid var(--accent);
+  border:2px solid var(--accent);
   border-radius:12px;
   padding: 6px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--bg);
 }
 
 .skill-icon {
@@ -229,7 +227,7 @@ body{
   aspect-ratio: 16 / 9;
   max-height: 75vh;
   border-radius: 20px;
-  border: 3px solid var(--accent);
+  border: 2px solid var(--accent);
   overflow: hidden;
   background: transparent;
   box-shadow: 0 12px 35px rgba(0,0,0,0.4);
@@ -257,7 +255,7 @@ body{
   box-shadow: 0 12px 35px rgba(0,0,0,0.4);
   margin-bottom: 40px;
   border-radius: 20px;
-  border: 3px solid var(--accent);
+  border: 2px solid var(--accent);
 }
 
 /* each slide is exactly one viewport width */
@@ -401,6 +399,7 @@ body{
   justify-content:center;
   cursor:pointer;
   z-index:5;
+  filter:drop-shadow(0 2px 0 rgba(0, 0, 0, 0.5));
 }
 
 .carousel-prev{ left:8px; }
@@ -462,7 +461,7 @@ body{
   text-align: center;
 }
 
-.work-links {
+.links {
   margin: 0;
   text-align: center;
 
@@ -480,12 +479,6 @@ body{
 
 .work-title {
   text-decoration: underline;
-}
-
-.section-link {
-  display: flex;
-  justify-content: center;
-  margin-top: -30px;
 }
 
 .work-github,

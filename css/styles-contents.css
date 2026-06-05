@@ -98,15 +98,39 @@ body{
 
   max-width:900px;
   margin:auto;
-  margin-top: calc(160px / 2 + 20px); /* half avatar + extra spacing */
   flex:1 1 auto;
 }
 
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 2px solid var(--accent); /* Line color and thickness */
+}
+
+.divider:not(:empty)::before {
+  margin-right: .5em; /* Space between line and text */
+}
+
+.divider:not(:empty)::after {
+  margin-left: .5em; /* Space between line and text */
+}
+
+.divider span {
+  padding: 5px 15px;
+  border-radius: 4px;        /* Rounded corners */
+  font-weight: bold;
+}
+
 .avatar{
-  position:absolute;          /* important */
-  left:50%;
-  transform:translateX(-50%);
-  bottom:-70px;
+  margin: 0 auto; /* Centers horizontally */
 
   width: clamp(100px, 25vw, 160px);
   height: clamp(100px, 25vw, 160px);
@@ -117,11 +141,6 @@ body{
 
   z-index:10;                  /* ensures it sits above video */
   box-shadow: 0 12px 35px rgba(0,0,0,0.4);
-}
-
-.video-wrapper {
-    display: flex;
-    justify-content: center;
 }
 
 .avatar img{
@@ -203,10 +222,7 @@ body{
 
 /* Carousel */
 .featured-section{
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  box-sizing: border-box;
+  margin-bottom:32px;
 }
 
 .section-subtitle{
@@ -219,7 +235,7 @@ body{
   overflow:visible; /* arrows sit outside viewport */
   max-height: 75vh;
   max-width: 1200px;
-  width: 100%;
+  width: 80vw;
   aspect-ratio: 16 / 9;
   margin: 0 auto;
   margin-bottom: 40px;
@@ -234,13 +250,11 @@ body{
   overflow: hidden;
   background: transparent;
   box-shadow: 0 12px 35px rgba(0,0,0,0.4);
-  width: 100%;
 }
 
 /* The viewport defines the visible area and gutters for padding */
 .carousel-viewport{
   height: 100%;
-  width: 100%;
 }
 
 /* track slides horizontally inside viewport */
@@ -261,28 +275,6 @@ body{
   margin-bottom: 40px;
   border-radius: 20px;
   border: 2px solid var(--accent);
-  padding: 20px;
-}
-
-.httyd-game {
-  background: #a69e79;
-}
-
-.Ghouls-And-Gold {
-  background: #000;
-  color: #fff;
-}
-
-.gourmet-heaven {
-  background: #ffe3cb;
-}
-
-.Game_1942 {
-  background: #c1d4ef;
-}
-
-.laames {
-  background: #a5abc9;
 }
 
 /* each slide is exactly one viewport width */

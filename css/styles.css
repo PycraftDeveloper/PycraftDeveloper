@@ -59,7 +59,7 @@ body{
 
 .frosted-background {
   background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
 
   z-index: -1;
 

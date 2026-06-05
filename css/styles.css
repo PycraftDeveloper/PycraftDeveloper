@@ -44,7 +44,7 @@ body{
   width: 100vw;
   height: 100vh;
   z-index: -2; /* Pushes it behind your project cards */
-  background-color: #f8f9fa; /* Your base background color */
+  background-color: var(--bg); /* Your base background color */
   overflow: hidden;
 }
 

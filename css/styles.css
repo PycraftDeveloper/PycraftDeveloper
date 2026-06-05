@@ -36,6 +36,43 @@ body{
   padding:18px;
 }
 
+/* Container that sits behind everything */
+.hexagon-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2; /* Pushes it behind your project cards */
+  background-color: #f8f9fa; /* Your base background color */
+  overflow: hidden;
+}
+
+/* Individual hexagon styling */
+.hex {
+  position: absolute;
+  /* Width and height are now handled dynamically by JS */
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  transform: translate(-50%, -50%); /* Centers the random coordinate point */
+  /* Opacity removed so they stay 100% solid and opaque */
+}
+
+.frosted-background {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(4px);
+
+  z-index: -1;
+
+  /* ADD THESE LINES TO FIX THE LAYER: */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Sits directly on top of -2 (hexagons) but behind content (0) */
+  pointer-events: none; /* Prevents this layer from blocking mouse clicks on links */
+}
+
 .hero{
   position: relative;
   height: 30vw;

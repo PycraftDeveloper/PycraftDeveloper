@@ -305,10 +305,12 @@ body{
 
 .PMMA {
   background: #e8e4e3;
+  color: #000;
 }
 
 .httyd-game {
   background: #a69e79;
+  color: #000;
 }
 
 .Ghouls-And-Gold {
@@ -318,14 +320,17 @@ body{
 
 .gourmet-heaven {
   background: #ffe3cb;
+  color: #000;
 }
 
 .Game_1942 {
   background: #c1d4ef;
+  color: #000;
 }
 
 .laames {
   background: #a5abc9;
+  color: #000;
 }
 
 /* each slide is exactly one viewport width */

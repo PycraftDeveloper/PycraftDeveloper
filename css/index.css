@@ -2,77 +2,31 @@
 Banner Video DMs: (1200, 420) px
 */
 
-:root{
-  --bg:rgb(255, 255, 255);
-  --text:rgb(0, 0, 0);
-  --accent: rgb(0, 0, 128);
-  --light_accent: rgb(70, 122, 218);
-  --dark_accent: rgb(0, 0, 128);
+.video-avatar{
+  margin: 0 auto; /* Centers horizontally */
+  position:absolute;          /* important */
+  left:50%;
+  transform:translateX(-50%);
+  bottom:-70px;
+
+  width: clamp(100px, 25vw, 160px);
+  height: clamp(100px, 25vw, 160px);
+
+  border-radius:50%;
+  overflow:hidden;
+  border:2px solid var(--accent);
+
+  z-index:10;                  /* ensures it sits above video */
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
 }
 
-@media (prefers-color-scheme: dark) {
-    :root{
-      --bg: rgb(30, 30, 30);
-      --text: rgb(255, 255, 255);
-      --accent: rgb(70, 122, 218);
-    }
-}
+.video-avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  color:var(--text);
-  background:var(--bg);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:1.4;
-}
-
-.site{
-  max-width: 1200px;
-  margin:0 auto;
-  padding:18px;
-}
-
-/* Container that sits behind everything */
-.hexagon-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -2; /* Pushes it behind your project cards */
-  background-color: var(--bg); /* Your base background color */
-  overflow: hidden;
-}
-
-/* Individual hexagon styling */
-.hex {
-  position: absolute;
-  /* Width and height are now handled dynamically by JS */
-  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-  transform: translate(-50%, -50%); /* Centers the random coordinate point */
-  /* Opacity removed so they stay 100% solid and opaque */
-}
-
-.frosted-background {
-  position: fixed;
-  top: 0;
-  height: 100vh;
-  z-index: -1; 
-  pointer-events: none; 
-
-  /* Perfect alignment fix */
-  width: 100%;
-  max-width: 1200px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  /* Center color (Frosted) */
-  background: color-mix(in srgb, var(--bg) 75%, transparent);
-  backdrop-filter: blur(6px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
 }
 
 .hero{
@@ -109,23 +63,6 @@ body{
   animation: fadeUp 1s ease forwards;
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Profile header */
-.profile{
-  display:flex;
-  gap:20px;
-  align-items:flex-start;
-  margin-bottom:18px;
-}
-
 .notice {
   opacity: 0;
   animation: fadeUp 1.2s ease forwards;
@@ -141,49 +78,12 @@ body{
   flex:1 1 auto;
 }
 
-.avatar{
-  position:absolute;          /* important */
-  left:50%;
-  transform:translateX(-50%);
-  bottom:-70px;
-
-  width: clamp(100px, 25vw, 160px);
-  height: clamp(100px, 25vw, 160px);
-
-  border-radius:50%;
-  overflow:hidden;
-  border:2px solid var(--accent);
-
-  z-index:10;                  /* ensures it sits above video */
-  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
-}
-
 .video-wrapper {
     display: flex;
     justify-content: center;
 }
 
-.avatar img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-
-  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
-}
-
-.name{
-  margin:0;
-  font-size:40px;
-  font-weight:700;
-  letter-spacing: -0.5px;
-
-  opacity: 0;
-  animation: fadeUp 1s ease forwards;
-  animation-delay: 0.05s;
-}
-
-.links{
+.profile-links{
   margin-top:6px;
   color:var(--accent);
   font-weight:600;
@@ -193,7 +93,7 @@ body{
   animation-delay: 0.1s;
 }
 
-.links a{
+.profile-links a{
   text-decoration:none;
   margin:0 6px;
 }

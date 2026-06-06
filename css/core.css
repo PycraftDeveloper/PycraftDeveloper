@@ -1,0 +1,94 @@
+:root{
+  --bg:rgb(255, 255, 255);
+  --text:rgb(0, 0, 0);
+  --accent: rgb(0, 0, 128);
+  --light_accent: rgb(70, 122, 218);
+  --dark_accent: rgb(0, 0, 128);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root{
+      --bg: rgb(30, 30, 30);
+      --text: rgb(255, 255, 255);
+      --accent: rgb(70, 122, 218);
+    }
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--text);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.4;
+}
+
+.site{
+  max-width: 1200px;
+  margin:0 auto;
+  padding:18px;
+}
+
+/* Container that sits behind everything */
+.hexagon-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2; /* Pushes it behind your project cards */
+  background-color: var(--bg); /* Your base background color */
+  overflow: hidden;
+}
+
+/* Individual hexagon styling */
+.hex {
+  position: absolute;
+  /* Width and height are now handled dynamically by JS */
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  transform: translate(-50%, -50%); /* Centers the random coordinate point */
+  /* Opacity removed so they stay 100% solid and opaque */
+}
+
+.frosted-background {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  z-index: -1; 
+  pointer-events: none; 
+
+  /* Perfect alignment fix */
+  width: 100%;
+  max-width: 1200px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* Center color (Frosted) */
+  background: color-mix(in srgb, var(--bg) 75%, transparent);
+  backdrop-filter: blur(6px);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.name{
+  margin:0;
+  font-size:40px;
+  font-weight:700;
+  letter-spacing: -0.5px;
+
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.05s;
+
+  text-align: center;
+}

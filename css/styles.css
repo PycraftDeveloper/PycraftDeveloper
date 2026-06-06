@@ -58,19 +58,21 @@ body{
 }
 
 .frosted-background {
-  background: color-mix(in srgb, var(--bg) 75%, transparent);
-  backdrop-filter: blur(8px);
-
-  z-index: -1;
-
-  /* ADD THESE LINES TO FIX THE LAYER: */
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100vw;
   height: 100vh;
-  z-index: -1; /* Sits directly on top of -2 (hexagons) but behind content (0) */
-  pointer-events: none; /* Prevents this layer from blocking mouse clicks on links */
+  z-index: -1; 
+  pointer-events: none; 
+
+  /* Perfect alignment fix */
+  width: 100%;
+  max-width: 1200px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* Center color (Frosted) */
+  background: color-mix(in srgb, var(--bg) 75%, transparent);
+  backdrop-filter: blur(6px);
 }
 
 .hero{
@@ -220,7 +222,7 @@ body{
   border:2px solid var(--accent);
   border-radius:12px;
   padding: 6px;
-  background-color: var(--bg);
+  background-color: rgb(255, 255, 255);
 }
 
 .skill-icon {
@@ -299,6 +301,10 @@ body{
   border-radius: 20px;
   border: 2px solid var(--accent);
   padding: 20px;
+}
+
+.PMMA {
+  background: #e8e4e3;
 }
 
 .httyd-game {

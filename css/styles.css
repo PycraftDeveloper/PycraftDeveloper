@@ -5,16 +5,16 @@ Banner Video DMs: (1200, 420) px
 :root{
   --bg:rgb(255, 255, 255);
   --text:rgb(0, 0, 0);
-  --primary_accent: rgb(0, 0, 128);
-  --secondary_accent: rgb(70, 122, 218);
+  --accent: rgb(0, 0, 128);
+  --light_accent: rgb(70, 122, 218);
+  --dark_accent: rgb(0, 0, 128);
 }
 
 @media (prefers-color-scheme: dark) {
     :root{
       --bg: rgb(30, 30, 30);
       --text: rgb(255, 255, 255);
-      --primary_accent: rgb(70, 122, 218);
-      --secondary_accent: rgb(0, 0, 128);
+      --accent: rgb(70, 122, 218);
     }
 }
 
@@ -92,7 +92,7 @@ body{
   transform:translate(-50%,-50%);
   z-index:0;
 
-  border:2px solid var(--primary_accent);
+  border:2px solid var(--accent);
   border-radius:12px;
   box-shadow: 0 12px 35px rgba(0,0,0,0.4);
 }
@@ -152,7 +152,7 @@ body{
 
   border-radius:50%;
   overflow:hidden;
-  border:2px solid var(--primary_accent);
+  border:2px solid var(--accent);
 
   z-index:10;                  /* ensures it sits above video */
   box-shadow: 0 12px 35px rgba(0,0,0,0.4);
@@ -185,7 +185,7 @@ body{
 
 .links{
   margin-top:6px;
-  color:var(--primary_accent);
+  color:var(--accent);
   font-weight:600;
 
   opacity: 0;
@@ -219,7 +219,7 @@ body{
   text-align: center;
 
   box-shadow: 0 12px 35px rgba(0,0,0,0.4);
-  border:2px solid var(--primary_accent);
+  border:2px solid var(--accent);
   border-radius:12px;
   padding: 6px;
   background-color: rgb(255, 255, 255);
@@ -269,7 +269,7 @@ body{
   aspect-ratio: 16 / 9;
   max-height: 75vh;
   border-radius: 20px;
-  border: 2px solid var(--primary_accent);
+  border: 2px solid var(--accent);
   overflow: hidden;
   background: transparent;
   box-shadow: 0 12px 35px rgba(0,0,0,0.4);
@@ -299,7 +299,7 @@ body{
   box-shadow: 0 12px 35px rgba(0,0,0,0.4);
   margin-bottom: 40px;
   border-radius: 20px;
-  border: 2px solid var(--primary_accent);
+  border: 2px solid var(--accent);
   padding: 20px;
 }
 
@@ -318,7 +318,7 @@ body{
   color: #fff;
 
   .emphasis {
-    color: var(--secondary_accent)
+    color: var(--light_accent)
   }
 }
 
@@ -445,7 +445,7 @@ body{
   width:12px;
   height:12px;
   border-radius:50%;
-  border:2px solid var(--primary_accent);
+  border:2px solid var(--accent);
   background:transparent;
   cursor:pointer;
   box-sizing: border-box;
@@ -462,7 +462,7 @@ body{
 }
 
 .carousel-dot.active{
-  background:var(--primary_accent);
+  background:var(--accent);
 }
 
 /* arrows */
@@ -545,7 +545,7 @@ body{
   text-align: center;
 
   margin-top:6px;
-  color:var(--primary_accent);
+  color:var(--accent);
   font-weight:600;
 }
 
@@ -570,7 +570,7 @@ body{
 
 .emphasis {
   font-weight: 600;
-  color: var(--primary_accent); /* or your palette */
+  color: var(--accent); /* or your palette */
 }
 
 #backToTop {

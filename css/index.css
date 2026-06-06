@@ -276,3 +276,40 @@ Banner Video DMs: (1200, 420) px
   margin-top:8px;
   padding:6px 0;
 }
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+}
+
+.icon-button {
+  display: inline-flex;  /* Keeps the button inline while allowing flex rules */
+  align-items: center;   /* Perfectly centers the image and text vertically */
+  gap: 8px;              /* Adds a clean space between the image and text */
+  padding: 10px 20px;    /* Adds internal padding for the button look */
+  cursor: pointer;       /* Changes the cursor to a hand pointer on hover */
+  background-color: var(--bg);
+  font-size: 30px;
+
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+  border:4px solid rgb(255, 0, 0);
+  border-radius:12px;
+  padding: 6px;
+
+  animation: rainbow-border 7.5s linear infinite;
+}
+
+.button-img {
+  width: 40px;           /* Restricts the image to icon-size */
+  height: 40px;          /* Maintains proportion */
+  object-fit: contain;
+}
+
+@keyframes rainbow-border {
+  0% {
+    filter: hue-rotate(0deg) brightness(1.5);
+  }
+  100% {
+    filter: hue-rotate(360deg) brightness(1.5);
+  }
+}

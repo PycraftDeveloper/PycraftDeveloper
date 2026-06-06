@@ -276,14 +276,3 @@ Banner Video DMs: (1200, 420) px
   margin-top:8px;
   padding:6px 0;
 }
-
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  gap: 0.3rem;
-}
-
-.image-grid img {
-  max-width: 100%;
-  height: auto;
-}

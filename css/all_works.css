@@ -110,12 +110,6 @@ Banner Video DMs: (1200, 420) px
   background-color: var(--bg);
 }
 
-.skill-icon {
-  width: 2em;
-  height: auto;
-  vertical-align: text-bottom;
-}
-
 .platforms{
   margin: 0 auto;
   font-weight:300;
@@ -144,40 +138,4 @@ Banner Video DMs: (1200, 420) px
 
 .points{
   text-align: left;
-}
-
-.section-title{
-  margin:8px 0 14px;
-  font-size:28px;
-  text-decoration:underline;
-  text-underline-offset:6px;
-  text-align:center;
-}
-
-#backToTop {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(0,0,0,0.65);
-  backdrop-filter: blur(4px);
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s ease;
-}
-
-#backToTop.visible {
-  opacity: 1;
-  pointer-events: auto;
 }

@@ -2,8 +2,10 @@
   --bg:rgb(255, 255, 255);
   --text:rgb(0, 0, 0);
   --accent: rgb(0, 0, 128);
+  --opposite_accent: rgb(70, 122, 218);
   --light_accent: rgb(70, 122, 218);
   --dark_accent: rgb(0, 0, 128);
+  --link_clicked: #551a8b;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -11,6 +13,8 @@
       --bg: rgb(30, 30, 30);
       --text: rgb(255, 255, 255);
       --accent: rgb(70, 122, 218);
+      --opposite_accent: rgb(0, 0, 128);
+      --link_clicked: #9362ff;
     }
 }
 
@@ -31,6 +35,21 @@ body{
   margin:0 auto;
   padding:18px;
 }
+
+a:link {
+  color: var(--accent); /* A deeper, high-contrast blue */
+  text-decoration: underline; /* Keeps the link recognizable */
+}
+
+a:visited {
+  color: var(--link_clicked); /* A distinct color for links already clicked */
+}
+
+a:hover, a:focus {
+  color: var(--opposite_accent); /* Darkens when a user hovers or tabs over it */
+  text-decoration: none; /* Provides visual feedback */
+}
+
 
 /* Container that sits behind everything */
 .hexagon-background {

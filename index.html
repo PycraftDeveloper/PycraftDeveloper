@@ -429,7 +429,10 @@
     <div class="button-container">
       <a href="contents.html" target="_blank">
         <button type="button" class="icon-button">
-          <img src="images/see_more.png" alt="See more button" class="button-img">
+          <picture>
+            <source srcset="images/see_more_light.png" media="(prefers-color-scheme: dark)" class="button-img">
+            <img src="images/see_more_dark.png" alt="See more button" class="button-img">
+          </picture>
           Click to see all work!
         </button>
       </a>

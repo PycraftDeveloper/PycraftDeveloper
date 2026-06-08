@@ -86,7 +86,7 @@ a:hover, a:focus {
   transform: translateX(-50%);
 
   /* Center color (Frosted) */
-  background: color-mix(in srgb, var(--bg) 75%, transparent);
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
   backdrop-filter: blur(6px);
 }
 

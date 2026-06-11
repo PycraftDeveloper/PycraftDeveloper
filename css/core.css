@@ -106,6 +106,24 @@ a:focus {
   backdrop-filter: blur(6px);
 }
 
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  width: 100%;
+  /* allows shrinking on small screens */
+  height: auto;
+  /* keeps aspect ratio */
+  max-height: 128px;
+  /* never exceed 256px tall */
+  max-width: 128px;
+  /* optional: prevents it from getting too wide */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 17.5px rgba(0, 0, 0, 0.4);
+}
+
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -124,9 +142,14 @@ a:focus {
 
   opacity: 0;
   animation: fadeUp 1s ease forwards;
-  animation-delay: 0.05s;
 
   text-align: center;
+}
+
+.profile-links {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.1s;
 }
 
 .profile-links a,
@@ -152,16 +175,13 @@ a:focus {
 
   opacity: 0;
   animation: fadeUp 1s ease forwards;
-  animation-delay: 0.15s;
+  animation-delay: 0.2s;
 }
 
 .skills {
   margin: 0 auto;
   font-weight: 300;
 
-  opacity: 0;
-  animation: fadeUp 1s ease forwards;
-  animation-delay: 0.25s;
   width: fit-content;
   text-align: center;
 
@@ -170,12 +190,40 @@ a:focus {
   border-radius: 12px;
   padding: 6px;
   background-color: rgb(255, 255, 255);
+
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.4s;
 }
 
 .skill-icon {
   width: 2em;
   height: auto;
   vertical-align: text-bottom;
+}
+
+.notice-title {
+  margin: 8px 0 14px;
+  font-size: 28px;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-align: center;
+
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.skills-title {
+  margin: 8px 0 14px;
+  font-size: 28px;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-align: center;
+
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.3s;
 }
 
 /* Section titles */

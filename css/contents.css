@@ -64,3 +64,17 @@ Banner Video DMs: (1200, 420) px
   /* Rounded corners */
   font-weight: bold;
 }
+
+.contents {
+  margin: 0 auto;
+  font-weight: 300;
+
+  width: fit-content;
+  text-align: center;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  padding: 6px;
+  background-color: rgb(255, 255, 255);
+}

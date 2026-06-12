@@ -58,6 +58,7 @@ Banner Video DMs: (1200, 420) px
   border: 2px solid var(--accent);
   border-radius: 12px;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+  background-color: black;
 }
 
 .hero::after {

@@ -22,6 +22,81 @@
   box-sizing: border-box
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.yt-lite {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+}
+
+.yt-lite::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 64px;
+  height: 64px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  backdrop-filter: blur(6px);
+}
+
+/* triangle */
+.yt-lite::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  /* optical centering fix */
+
+  width: 0;
+  height: 0;
+  border-left: 24px solid white;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+
+  pointer-events: none;
+  z-index: 3;
+}
+
+.yt-lite:hover::after {
+  background: rgba(0, 0, 0, 0.75);
+  transform: translate(-50%, -50%) scale(1.05);
+  transition: 0.15s ease;
+}
+
 html,
 body {
   height: 100%

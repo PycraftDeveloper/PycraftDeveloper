@@ -177,7 +177,7 @@ a:focus {
   transform: translateX(-50%);
 
   /* Center color (Frosted) */
-  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
   backdrop-filter: blur(6px);
 }
 
@@ -383,7 +383,7 @@ a:focus {
   height: 48px;
   border-radius: 50%;
   border: none;
-  background: color-mix(in srgb, var(--bg) 65%, transparent);
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
   backdrop-filter: blur(4px);
   color: var(--text);
   font-size: 24px;

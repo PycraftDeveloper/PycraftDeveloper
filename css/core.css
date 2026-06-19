@@ -166,7 +166,6 @@ a:focus {
   stroke-linejoin: round;
   /* Makes the corners look smooth */
   fill: var(--bg);
-
 }
 
 

@@ -138,8 +138,6 @@ a:focus {
   /* Provides visual feedback */
 }
 
-
-/* Container that sits behind everything */
 .hexagon-background {
   position: fixed;
   top: 0;
@@ -147,20 +145,35 @@ a:focus {
   width: 100vw;
   height: 100vh;
   z-index: -2;
-  /* Pushes it behind your project cards */
-  background-color: var(--bg);
-  /* Your base background color */
+  background-color: var(--bg, #1a1a1a);
   overflow: hidden;
 }
 
-/* Individual hexagon styling */
+/* 1. The Positioning & Glow Container (NO CLIP PATH HERE) */
 .hex {
   position: absolute;
-  /* Width and height are now handled dynamically by JS */
-  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   transform: translate(-50%, -50%);
-  /* Centers the random coordinate point */
-  /* Opacity removed so they stay 100% solid and opaque */
+  width: var(--hex-w);
+  height: var(--hex-h);
+
+  /* This creates the massive, unclipped bokeh glow aura */
+  filter: blur(0.4vw);
+  /* Matches the soft transparency in your image */
+  will-change: transform;
+}
+
+/* 2. The Inner Shape (Clip path goes here instead) */
+.hex::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--hex-color);
+
+  /* The shape is clipped here, inside the unclipped blurred parent */
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
 
 .frosted-background {
@@ -177,8 +190,7 @@ a:focus {
   transform: translateX(-50%);
 
   /* Center color (Frosted) */
-  background: color-mix(in srgb, var(--bg) 80%, transparent);
-  backdrop-filter: blur(6px);
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
 }
 
 .logo {
@@ -383,7 +395,7 @@ a:focus {
   height: 48px;
   border-radius: 50%;
   border: none;
-  background: color-mix(in srgb, var(--bg) 65%, transparent);
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
   backdrop-filter: blur(4px);
   color: var(--text);
   font-size: 24px;

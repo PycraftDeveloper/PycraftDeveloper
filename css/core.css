@@ -138,7 +138,6 @@ a:focus {
   /* Provides visual feedback */
 }
 
-
 /* Container that sits behind everything */
 .hexagon-background {
   position: fixed;
@@ -153,15 +152,23 @@ a:focus {
   overflow: hidden;
 }
 
-/* Individual hexagon styling */
 .hex {
   position: absolute;
-  /* Width and height are now handled dynamically by JS */
-  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   transform: translate(-50%, -50%);
-  /* Centers the random coordinate point */
-  /* Opacity removed so they stay 100% solid and opaque */
+  overflow: visible;
+  /* Ensures borders don't get clipped at the SVG bounds */
 }
+
+.hex polygon {
+  /* Change this to your desired line colour */
+  stroke-width: 2px;
+  /* Change this to your desired line width */
+  stroke-linejoin: round;
+  /* Makes the corners look smooth */
+  fill: var(--bg);
+
+}
+
 
 .frosted-background {
   position: fixed;

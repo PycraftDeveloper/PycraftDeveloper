@@ -425,6 +425,7 @@ a:focus {
 .httyd-game,
 .gourmet-heaven,
 .Game_1942,
+.SmashSquad,
 .laames {
   background: var(--bg);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
@@ -468,6 +469,10 @@ a:focus {
   color: #000;
 }
 
+.SmashSquad {
+  background: #ffa5bc;
+  color: #000;
+}
 
 .image-grid {
   display: grid;

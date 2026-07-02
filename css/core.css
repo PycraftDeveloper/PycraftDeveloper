@@ -165,7 +165,7 @@ a:focus {
   /* Change this to your desired line width */
   stroke-linejoin: round;
   /* Makes the corners look smooth */
-  fill: var(--bg);
+  fill: color-mix(in srgb, var(--bg) 75%, transparent);
 }
 
 

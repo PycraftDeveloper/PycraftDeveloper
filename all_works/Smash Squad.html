@@ -44,6 +44,7 @@
         alt="Visual Studio">
       <img class="skill-icon" src="https://icon.icepanel.io/Technology/svg/Visual-Studio-Code-%28VS-Code%29.svg"
         title="Visual Studio Code" alt="Visual Studio Code">
+      <img class="skill-icon" src="https://icon.icepanel.io/Technology/svg/Blender.svg" title="Blender" alt="Blender">
     </div>
 
     <h3 class="section-title">Supported Platforms</h3>
@@ -69,7 +70,7 @@
       Series S</span> using <span class="emphasis">Microsoft's Universal Windows Platform (UWP)</span> and <span
       class="emphasis">Unity 6000</span>.</br></br>
     The game features a single, expansive 'Candy-land' themed level. This level is comprised of a series of smaller
-    islands (in this case made from sweets), and the players must parcour around to reach each other, and avoid the
+    islands (in this case made from sweets), and the players must parkour around to reach each other, and avoid the
     large holes which will cause the player to fall and loose the match.
 
 
@@ -198,7 +199,38 @@
 
     <h2 class="section-title">Reflection</h2>
     <div class="details">
+      The game 'Smash Squad' can be seen almost as an 3D focused extension to the exploration into 2D games optimisation
+      seen in the game <a href="../all_works/1942.html">1942</a>. This is because the targeted platform for this game
+      was the Xbox Series S, with games built for the Universal Windows Platform (UWP). Given this platform's
+      budget-focused hardware choices, particular attention was put on insuring the game ran smoothly. Given the
+      performance focus needed for this game, it's development explored a variety of different optimisation tools:
+      <ul>
+        <li><strong>Unity Addressables:</strong> This asset management system enables the asynchronous loading of game
+          assets, which was used to ensure the game remained responsive and operational whilst loading game assets.</li>
+        <li><strong>Blender:</strong> This game required the creation of some very unique game levels. The built in
+          terrain system was not suitable for this, and loading each of the individual game assets in was very
+          inefficient. To fix this, all the game maps were designed in Blender (using 3rd party models) and exported as
+          a single model.</li>
+        <li><strong>Temporal Delayed Updating: </strong> This is a technique used to delay the updating of some game
+          objects during runtime based on their importance. This technique was used to spread the load of updating
+          less-important assets across multiple frames, instead of slowing down the main game loop.</li>
+      </ul>
 
+      Further to the performance focus of this game, it also marks the beginning of my journey into exploring
+      multi-player games. This game features side-by-side local multi-player, which was implemented a full year before
+      any formal introduction into multi-player systems programming on the same BSc Games Programming course. Whilst my
+      implementation is not the 'intended' way to implement this mechanic, and there are some areas like in the menus,
+      where my approach seems inflexible - the mechanic worked perfectly in game. Of course however, this was a hugely
+      computationally expensive thing to do and contributed in-part to my need for further exploration into games
+      optimisation.
+      </br></br>
+      Overall, I feel like this game was a very successful demonstration of me showing off the skills I have as a 2nd
+      year BSc Games Programming student, and shows a clear interest in exploring more advanced concepts beyond the
+      scope of the module and course to create the desired effect. On the flip side, whilst technically complex, the
+      game is missing some important in-game polish; like for example animations. There is also the option for a second
+      (arguably more complex to design) game level, which isn't present in the game in it's current form. There is
+      clearly an argument to be made in exploring introducing these missing features - although there is no plan to do
+      so at this time.
     </div>
 
     <h2 class="section-title">Images</h2>

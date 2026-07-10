@@ -8,7 +8,7 @@ const resultsDiv = document.getElementById("results");
 
 async function initSearch() {
     try {
-        const response = await fetch("../generated/search-index.json");
+        const response = await fetch("generated/search-index.json");
         pages = await response.json();
 
         fuse = new Fuse(pages, {

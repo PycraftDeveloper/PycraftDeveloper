@@ -484,3 +484,10 @@ a:focus {
   max-width: 100%;
   height: auto;
 }
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}

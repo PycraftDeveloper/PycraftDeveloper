@@ -21,7 +21,7 @@ Banner Video DMs: (1200, 420) px
 .main-content {
   opacity: 0;
   animation: fadeUp 1s ease forwards;
-  animation-delay: 0.3s;
+  animation-delay: 0.4s;
 }
 
 .avatar img {
@@ -77,4 +77,59 @@ Banner Video DMs: (1200, 420) px
   border-radius: 12px;
   padding: 6px;
   background-color: rgb(255, 255, 255);
+}
+
+.search-div {
+  display: flex;
+  justify-content: center; /* Horizontally centers the input */
+  align-items: center;     /* Vertically centers the input */
+
+}
+
+.search {
+  width: 100%;
+  max-width: 700px; /* Optional maximum width */
+  box-sizing: border-box;
+
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  padding: 6px;
+  background-color: white;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.search-results {
+  flex-direction: column;
+  gap: 20px;
+
+  display: none; /* Hidden by default */
+  margin-top: 5px;
+  background: var(--bg);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+  margin-bottom: 40px;
+  border-radius: 20px;
+  border: 2px solid var(--accent);
+  padding: 20px;
+}
+
+.search-results.visible {
+    display: block;
+}
+
+.back {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.search-result h3,
+.search-result small,
+.search-result p {
+  margin: 0;
+}
+
+.search-result {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
 }

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio — Thomas Jebson</title>
+  <title>Portfolio — Thomas Jebson - Contents</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/core.css">
@@ -50,6 +50,14 @@
 
     <div class="main-content">
 
+      <h2 class="section-title">Search</h2>
+
+      <div class="search-div">
+        <input id="searchInput" type="search" class="search" placeholder="Loading search..." disabled>
+      </div>
+
+      <div class="search-results" id="results"></div>
+
       <h2 class="section-title">Contents</h2>
 
       <div class="contents">
@@ -75,7 +83,7 @@
 
         <section class="work-about">
           <h4>About</h4>
-          <span class="emphasis">Academic Group Project (Mark: 84%)</span> • Smash Squad is a 3D King-of-the-Hill
+          <span class="emphasis">Academic Project (Mark: 84%)</span> • Smash Squad is a 3D King-of-the-Hill
           style two player PvP style game made in Unity 6000.<br>
           <i>(<b>Created:</b> October 2025, <b>Updated:</b> July 2026 - Finished)</i><br>
         </section>
@@ -484,9 +492,11 @@
     </div>
   </main>
 
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0/dist/fuse.min.js"></script>
   <script src="js/to_top.js" defer></script>
   <script src="js/background.js" defer></script>
   <script src="js/yt-lite.js" defer></script>
+  <script src="js/search.js" defer></script>
 
   <button id="backToTop" aria-label="Back to top">▲</button>
 </body>

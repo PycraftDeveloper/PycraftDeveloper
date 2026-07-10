@@ -1,6 +1,27 @@
 Use this command to steam videos!
 
-ffmpeg -i n.mp4 -codec: copy -start_number 0 -hls_time 4 -hls_list_size 0 -f hls videos/banner/n/stream.m3u8
+ffmpeg -i "A:\GitHub\PycraftDeveloper\videos\raw\n.mp4" -c:v libx264 -crf 23 -an -g 96 -keyint_min 96 -sc_threshold 0 -vf "scale=1200:420,format=yuv420p" -start_number 0 -hls_time 4 -hls_list_size 0 -f hls videos/banner/n/stream.m3u8
 
 'n.mp4' is the file input
 'videos/banner/n/stream.m3u8' is the output file (plus some smaller chunks)
+
+Video size: 1200x420
+IN: 2.5s (INCL fades)
+FADEs: 0.5s (5)
+OUT: 2.5s
+
+VID_0:  Gourmet_Heaven - Sushi MG (DONE)
+VID_1:  Gourmet_Heaven - Intro (DONE)
+VID_2:  Gourmet_Heaven - Gameplay (DONE)
+
+VID_3:  1942 (DONE)
+
+VID_4:  Ghouls_and_Gold
+
+VID_5:  HTTYD-Game - Scene 1
+VID_6:  HTTYD-Game - Scene 2
+VID_7:  HTTYD-Game - Scene 3
+
+VID_8:  Smash_Squad - Warp
+VID_9:  Smash_Squad - Launch
+VID_10: Smash_Squad - Geomancer

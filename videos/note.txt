@@ -10,17 +10,15 @@ IN: 2.5s (INCL fades)
 FADEs: 0.5s (5)
 OUT: 2.5s
 
-VID_0:  Gourmet_Heaven - Sushi MG (DONE)
-VID_1:  Gourmet_Heaven - Intro (DONE)
-VID_2:  Gourmet_Heaven - Gameplay (DONE)
+VID_0:  Gourmet_Heaven - Sushi MG (DONE) -- 1
+VID_1:  Gourmet_Heaven - Intro (DONE) -- 2
+VID_2:  Gourmet_Heaven - Gameplay (DONE) -- 3
 
-VID_3:  1942 (DONE)
+VID_3:  1942 (DONE) -- 4
 
-VID_4:  Ghouls_and_Gold
-
-VID_5:  HTTYD-Game - Scene 1
-VID_6:  HTTYD-Game - Scene 2
-VID_7:  HTTYD-Game - Scene 3
+VID_5:  HTTYD-Game - Scene 2 -- 5
+VID_6:  HTTYD-Game - Scene 1 -- 6
+VID_7:  HTTYD-Game - Scene 3 -- 7
 
 VID_8:  Smash_Squad - Warp
 VID_9:  Smash_Squad - Launch

@@ -133,3 +133,46 @@ Banner Video DMs: (1200, 420) px
   flex-direction: column;
   gap: 0px;
 }
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hide the real checkbox */
+.filters input {
+    display: none;
+}
+
+/* The chip */
+.filters label {
+    padding: 0.55rem 1rem;
+    border: 2px solid var(--shape);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.05);
+    color: var(--text);
+    cursor: pointer;
+    user-select: none;
+
+    transition:
+        background 0.2s,
+        border-color 0.2s,
+        transform 0.15s;
+}
+
+/* Hover */
+.filters label:hover {
+    border-color: #6fa8ff;
+    transform: translateY(-2px);
+}
+
+/* Selected */
+.filters input:checked + label {
+    background: #4f8cff;
+    border-color: #4f8cff;
+    color: var(--text);
+}

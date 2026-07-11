@@ -1,7 +1,7 @@
 // js/banner-video.js
 
 // Total number of stream folders in your directory
-const totalVideos = 4;
+const totalVideos = 7;
 
 const videoElement = document.getElementById('heroVideo');
 let hlsInstance = null; // Track the active hls.js instance

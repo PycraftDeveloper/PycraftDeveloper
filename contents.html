@@ -61,15 +61,59 @@
       <h2 class="section-title">Contents</h2>
 
       <div class="contents">
-        <a href="contents.html#2026">2026</a> <a href="contents.html#2025">2025</a> <a
-          href="contents.html#2024">2024</a>
+        <div class="filters">
+          <input type="checkbox" id="2026" value="2026">
+          <label for="2026">2026</label>
+
+          <input type="checkbox" id="2025" value="2025">
+          <label for="2025">2025</label>
+
+          <input type="checkbox" id="2024" value="2024">
+          <label for="2024">2024</label>
+        </div>
+
+        <div class="filters">
+          <input type="checkbox" id="academic" value="academic">
+          <label for="academic">Academic</label>
+
+          <input type="checkbox" id="independent" value="independent">
+          <label for="independent">Independent</label>
+
+          <input type="checkbox" id="gamejam" value="gamejam">
+          <label for="gamejam">Game Jam</label>
+        </div>
+
+        <div class="filters">
+          <input type="checkbox" id="unity" value="unity">
+          <label for="unity">Unity</label>
+
+          <input type="checkbox" id="unreal" value="unreal">
+          <label for="unreal">Unreal</label>
+
+          <input type="checkbox" id="noengine" value="noengine">
+          <label for="noengine">No Engine</label>
+        </div>
+
+        <div class="filters">
+          <input type="checkbox" id="python" value="python">
+          <label for="python">Python</label>
+
+          <input type="checkbox" id="cpp" value="cpp">
+          <label for="cpp">C++</label>
+
+          <input type="checkbox" id="c#" value="c#">
+          <label for="c#">C#</label>
+
+          <input type="checkbox" id="blueprints" value="blueprints">
+          <label for="blueprints">Blueprints</label>
+        </div>
       </div>
 
       <div id="2026" class="divider">
         <span>2026</span>
       </div>
 
-      <section id="SmashSquad" class="SmashSquad">
+      <section id="SmashSquad" class="SmashSquad" data-tags="2026,academic,unity,c#">
         <div class="logo">
           <img src="images/All Works/Smash Squad/logo.jpg" alt="Smash Squad Logo">
         </div>
@@ -124,7 +168,7 @@
         </h3>
       </section>
 
-      <section id="PMMA" class="PMMA">
+      <section id="PMMA" class="PMMA" data-tags="2026,independent,noengine,cpp,python">
         <div class="logo">
           <img src="images/All Works/PMMA/logo.jpg" alt="PMMA Logo">
         </div>
@@ -173,7 +217,7 @@
         </h3>
       </section>
 
-      <section id="Gourmet-Heaven" , class="gourmet-heaven">
+      <section id="Gourmet-Heaven" , class="gourmet-heaven" data-tags="2026,academic,unity,c#">
         <div class="logo">
           <img src="images/All Works/Gourmet Heaven/logo.jpg" alt="Gourmet Heaven Logo">
         </div>
@@ -242,7 +286,7 @@
         </h3>
       </section>
 
-      <section id="1942" class="Game_1942">
+      <section id="1942" class="Game_1942" data-tags="2026,academic,noengine,cpp">
         <div class="logo">
           <img src="images/All Works/1942/logo.jpg" alt="1942 Logo">
         </div>
@@ -295,7 +339,7 @@
         </h3>
       </section>
 
-      <section id="Ghouls-And-Gold" class="Ghouls-And-Gold">
+      <section id="Ghouls-And-Gold" class="Ghouls-And-Gold" data-tags="2026,gamejam,unity,c#">
         <div class="logo">
           <img src="images/All Works/Ghouls and Gold/logo.jpg" alt="Ghouls and Gold Logo">
         </div>
@@ -352,7 +396,7 @@
         </h3>
       </section>
 
-      <section id="httyd-game" class="httyd-game">
+      <section id="httyd-game" class="httyd-game" data-tags="2026,academic,unreal,blueprints">
         <div class="logo">
           <img src="images/All Works/How To Train Your Dragon Game/logo.jpg" alt="How to Train Your Dragon Game Logo">
         </div>
@@ -419,7 +463,7 @@
         </h3>
       </section>
 
-      <section id="LAaMES" class="laames">
+      <section id="LAaMES" class="laames" data-tags="2026,academic,noengine,python">
         <div class="logo">
           <img src="images/All Works/LAaMES/logo.jpg" alt="LAaMES Logo">
         </div>
@@ -497,6 +541,7 @@
   <script src="js/background.js" defer></script>
   <script src="js/yt-lite.js" defer></script>
   <script src="js/search.js" defer></script>
+  <script src="js/filtering.js" defer></script>
 
   <button id="backToTop" aria-label="Back to top">▲</button>
 </body>

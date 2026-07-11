@@ -6,6 +6,7 @@
   --light_accent: rgb(70, 122, 218);
   --dark_accent: rgb(0, 0, 128);
   --link_clicked: #551a8b;
+  --shape: rgb(80, 80, 80);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,6 +16,7 @@
     --accent: rgb(70, 122, 218);
     --opposite_accent: rgb(0, 0, 128);
     --link_clicked: #9362ff;
+    --shape: rgb(30, 30, 30);
   }
 }
 

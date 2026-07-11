@@ -428,7 +428,8 @@ a:focus {
 .gourmet-heaven,
 .Game_1942,
 .SmashSquad,
-.laames {
+.laames,
+.Bouncing-Balls {
   background: var(--bg);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
   margin-bottom: 40px;
@@ -473,6 +474,11 @@ a:focus {
 
 .SmashSquad {
   background: #ffa5bc;
+  color: #000;
+}
+
+.Bouncing-Balls {
+  background: #c0d3ea;
   color: #000;
 }
 

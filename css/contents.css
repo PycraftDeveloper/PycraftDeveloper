@@ -153,8 +153,8 @@ Banner Video DMs: (1200, 420) px
     padding: 0.55rem 1rem;
     border: 2px solid var(--shape);
     border-radius: 999px;
-    background: rgba(255,255,255,0.05);
-    color: var(--text);
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     cursor: pointer;
     user-select: none;
 
@@ -174,5 +174,5 @@ Banner Video DMs: (1200, 420) px
 .filters input:checked + label {
     background: #4f8cff;
     border-color: #4f8cff;
-    color: var(--text);
+    color: rgb(0, 0, 0);
 }

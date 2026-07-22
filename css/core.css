@@ -526,7 +526,7 @@ select {
 footer {
   text-align: center;
 
-  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  background: var(--bg);
   backdrop-filter: blur(6px);
 
   color: var(--text);

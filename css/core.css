@@ -285,20 +285,27 @@ a:focus {
   vertical-align: text-bottom;
 }
 
-.footer-panel {
-  margin: 0 auto 0 0; /* Changed: Pushes the panel to the left wall */
+.footer-icon-panel {
+  margin: 0 auto 0 0;
   font-weight: 300;
-
   width: fit-content;
-  text-align: left;   /* Changed: Aligns content inside to the left */
-
+  text-align: left;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
   border: 2px solid var(--accent);
   border-radius: 12px;
-  padding: 6px;
+  padding: 6px; /* This will now be perfectly uniform */
   background-color: rgb(255, 255, 255);
+
+  /* Add these two lines */
+  display: flex;
+  gap: 8px; /* Optional: Adds uniform space between images if you have multiple */
 }
 
+/* Ensure images don't have stray margins */
+.footer-icon-panel img {
+  margin: 0;
+  display: block;
+}
 
 .notice-title {
   margin: 8px 0 14px;

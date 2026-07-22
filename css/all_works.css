@@ -138,12 +138,6 @@ Banner Video DMs: (1200, 420) px
   background-color: rgb(255, 255, 255);
 }
 
-.platform-icon {
-  width: 2em;
-  height: auto;
-  vertical-align: text-bottom;
-}
-
 @media (max-width: 900px) {
   .image-grid {
     grid-template-columns: 1fr;

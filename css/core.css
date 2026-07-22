@@ -279,11 +279,26 @@ a:focus {
   animation-delay: 0.4s;
 }
 
-.skill-icon {
+.icon {
   width: 2em;
   height: auto;
   vertical-align: text-bottom;
 }
+
+.footer-panel {
+  margin: 0 auto 0 0; /* Changed: Pushes the panel to the left wall */
+  font-weight: 300;
+
+  width: fit-content;
+  text-align: left;   /* Changed: Aligns content inside to the left */
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  padding: 6px;
+  background-color: rgb(255, 255, 255);
+}
+
 
 .notice-title {
   margin: 8px 0 14px;
@@ -429,7 +444,8 @@ a:focus {
 .Game_1942,
 .SmashSquad,
 .laames,
-.Bouncing-Balls {
+.Bouncing-Balls,
+.Sokoban {
   background: var(--bg);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
   margin-bottom: 40px;
@@ -498,4 +514,76 @@ textarea,
 button,
 select {
   font: inherit;
+}
+
+footer {
+  text-align: center;
+
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(6px);
+
+  color: var(--text);
+  padding: 10px;
+}
+
+.columns {
+  display: flex;
+  align-items: flex-start; /* Aligns items to the top */
+  gap: 20px; /* Adds space between the avatar and the text */
+}
+
+.avatar {
+  margin: 0 auto;
+  /* Centers horizontally */
+
+  width: clamp(100px, 25vw, 160px);
+  height: clamp(100px, 25vw, 160px);
+
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--accent);
+
+  z-index: 10;
+  /* ensures it sits above video */
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Container for the text side */
+.column.is-marginless {
+  display: flex;
+  flex-direction: column; /* Stacks name above paragraph */
+  align-items: flex-start; /* Aligns both name and paragraph to the left edge */
+  text-align: left; /* Ensures text wrapper wraps left */
+}
+
+/* Centers the whole layout and sets the max-width limit */
+.footer-wrap {
+  max-width: 1200px;
+  margin: 0 auto;       /* Centers the container horizontally on the screen */
+  padding: 0 20px;      /* Prevents the content from touching edges on small screens */
+  width: 100%;          /* Ensures it takes full width up to 1200px */
+}
+
+.profile-text {
+  border-left: 2px solid var(--accent); /* Draws the vertical line */
+  padding-left: 24px;                    /* Creates space between line and text */
+  margin-left: 24px !important;         /* Creates space between line and avatar */
+}
+
+/* Optional: Hides the vertical line on mobile screens so it doesn't look weird when columns stack */
+@media (max-width: 768px) {
+  .profile-text {
+    border-left: none;
+    padding-left: 0;
+    margin-left: 0 !important;
+  }
 }

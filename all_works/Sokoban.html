@@ -66,7 +66,12 @@
     </br>
     <h2 class="section-title">About</h2>
     <div class="details">
-
+      Sokoban is a classic Japanese puzzle game initially released in 1982 by Hiroyuki Imabayashi. The recreated version
+      of the game, is known either as just Sokoban or Sokoban (ILA). The objective of the
+      game is to push crates around the level in order to place them on the marked goal tiles. The aim is to complete
+      the level in the least moves possible. The player can use WASD or the arrow keys to move, and can push crates by
+      moving into them. Crates cannot be pushed if they are blocked by a wall or another crate and you cannot undo more
+      than one previous move.
     </div>
 
     <h2 class="section-title">Credits</h2>
@@ -88,7 +93,47 @@
 
     <h2 class="section-title">Reflection</h2>
     <div class="details">
+      This game was initially developed as part of an academic project for the University of Northampton. As is
+      traditional for these assignments the brief is to re-create some or all of the mechanics of an existing game. In
+      this situation, the objective was to recreate the core mechanics from the original game, and then explore
+      introducing more advanced topics.
+      </br>
+      </br>
+      Unlike all previously undertaken assignments, this assignment required direct interaction with the <a
+        href="https://en.wikipedia.org/wiki/OpenGL" target="_blank">OpenGL API</a>
+      through <a href="https://github.com/dav1dde/glad" target="_blank">GLAD</a>. Previous assignments had exposed me to
+      multi-media APIs like <a href="https://www.sfml-dev.org/" target="_blank">SFML</a> and game engines like <a
+        href="https://godotengine.org/" target="_blank">Godot</a>,
+      <a href="https://unity.com/" target="_blank">Unity</a> and <a href="https://www.unrealengine.com/"
+        target="_blank">Unreal
+        Engine</a>. This meant relying on my previous extra-curricular work including (but not limited to) <a
+        href="https://github.com/PycraftDeveloper/PMMA" target="_blank">PMMA</a>, which was OpenGL based for a large
+      portion of it's development, although has since switched to <a href="https://github.com/bkaradzic/bgfx"
+        target="_blank">BGFX</a>.
 
+      </br>
+      </br>
+      My familiarity with OpenGL meant that just four weeks into the approximately 13 week development window I had a
+      complete base version of the game. This was built off - but fundamentally seperate - to my work in PMMA. This
+      allowed me to spend the remaining nine weeks adding advanced features and exploring more advanced optimisation
+      strategies for both the CPU and now also GPU. These are listed in detail below:
+      </br>
+      </br>
+      <h3>Extra Features</h3>
+      <ul>
+        <li><strong>Audio playback:</strong> The original version of the game explores audio playback using <a
+            href="https://github.com/nothings/stb/blob/master/stb_vorbis.c" target="_blank">STB Vorbis</a> to load
+          (*.ogg) files and <a href="https://github.com/mackron/miniaudio" target="_blank">MiniAudio</a> to play them.
+          This extra feature required the implementation of a custom audio-callback function with built in loop
+          functionality. <i>Please note: Audio playback was removed from the public version of the game due to concerns
+            over licensing.</i></li>
+      </ul>
+
+      <h3>Optimisations</h3>
+      <ul>
+        <li>
+        </li>
+      </ul>
     </div>
 
     <h2 class="section-title">Images</h2>

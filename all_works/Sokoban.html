@@ -69,9 +69,11 @@
       Sokoban is a classic Japanese puzzle game initially released in 1982 by Hiroyuki Imabayashi. The recreated version
       of the game, is known either as just Sokoban or Sokoban (ILA). The objective of the
       game is to push crates around the level in order to place them on the marked goal tiles. The aim is to complete
-      the level in the least moves possible. The player can use WASD or the arrow keys to move, and can push crates by
-      moving into them. Crates cannot be pushed if they are blocked by a wall or another crate and you cannot undo more
-      than one previous move.
+      the level in the least moves possible. The player can use <span class="emphasis">WASD or the arrow keys to
+        move</span>, and can push crates by
+      moving into them. Crates cannot be pushed if they are blocked by a wall or another crate and <span
+        class="emphasis">you cannot undo more
+        than one previous move</span>.
     </div>
 
     <h2 class="section-title">Credits</h2>
@@ -95,8 +97,9 @@
     <div class="details">
       This game was initially developed as part of an academic project for the University of Northampton. As is
       traditional for these assignments the brief is to re-create some or all of the mechanics of an existing game. In
-      this situation, the objective was to recreate the core mechanics from the original game, and then explore
-      introducing more advanced topics.
+      this situation, the objective was to recreate the core mechanics from the original game, and then <span
+        class="emphasis">explore
+        introducing more advanced topics</span>.
       </br>
       </br>
       Unlike all previously undertaken assignments, this assignment required direct interaction with the <a
@@ -113,27 +116,88 @@
 
       </br>
       </br>
-      My familiarity with OpenGL meant that just four weeks into the approximately 13 week development window I had a
+      My <span class="emphasis">familiarity with OpenGL</span> meant that just four weeks into the approximately 13 week
+      development window I had a
       complete base version of the game. This was built off - but fundamentally seperate - to my work in PMMA. This
-      allowed me to spend the remaining nine weeks adding advanced features and exploring more advanced optimisation
-      strategies for both the CPU and now also GPU. These are listed in detail below:
+      allowed me to spend the remaining nine weeks <span class="emphasis">adding advanced features</span> and <span
+        class="emphasis">exploring more advanced optimisation
+        strategies</span> for both the <span class="emphasis">CPU and now also GPU</span>. These are listed in detail
+      below:
       </br>
       </br>
       <h3>Extra Features</h3>
       <ul>
-        <li><strong>Audio playback:</strong> The original version of the game explores audio playback using <a
-            href="https://github.com/nothings/stb/blob/master/stb_vorbis.c" target="_blank">STB Vorbis</a> to load
+        <li><strong>Audio playback:</strong> The original version of the game explores <span class="emphasis">audio
+            playback</span> using <a href="https://github.com/nothings/stb/blob/master/stb_vorbis.c" target="_blank">STB
+            Vorbis</a> to load
           (*.ogg) files and <a href="https://github.com/mackron/miniaudio" target="_blank">MiniAudio</a> to play them.
-          This extra feature required the implementation of a custom audio-callback function with built in loop
+          This extra feature required the implementation of a <span class="emphasis">custom audio-callback
+            function</span> with built in loop
           functionality. <i>Please note: Audio playback was removed from the public version of the game due to concerns
             over licensing.</i></li>
+        <li><strong>Firework Particles:</strong> The game includes a firework effect which is displayed when a game
+          level is won. These firework effects perform a <span class="emphasis">simplistic 2D physics simulation for
+            gravity</span>. This effect also
+          includes <span class="emphasis">alpha transparency and blending</span>.</li>
+        <li><strong>Undo Counters:</strong> The game saves the previous game state, allowing for the current move to be
+          undone.</li>
+        <li><strong>Level Saving and Loading:</strong> The game <span class="emphasis">saves the progress of each level
+            in the background</span>,
+          ensuring the level can be closed and re-opened without needing to worry about ensuring the level is saved
+          manually.</li>
       </ul>
 
       <h3>Optimisations</h3>
       <ul>
-        <li>
+        <li><strong>Sprite Maps:</strong> The game <span class="emphasis">stores all the textures used in the game in a
+            single texture</span>, which
+          is used when rendering all the different textured assets in the game. This reduces memory and storage usage
+          and makes the game load assets faster. This technique is also used when rendering text, where <span
+            class="emphasis">a texture
+            atlas is generated from the font at runtime</span> using <a href="https://freetype.org/"
+            target="_blank">FreeType</a>.
+        </li>
+        <li><strong>Instanced Rendering:</strong> The game uses <span class="emphasis">instanced rendering for
+            text</span>, which allows for much
+          improved rendering performance.
+        </li>
+        <li><strong>Optimised Geometry:</strong> The game only updates shape geometry only when nessasary, allowing for
+          <span class="emphasis">effective use of vertex buffer objects (VBOs)</span> to store and <span
+            class="emphasis">re-use shape data
+            across multiple frames</span>. In
+          addition to this, mathematical principles like <span class="emphasis">'Saggita'</span> were used when
+          calculating the minimum number of
+          vertexes needed to render a
+          smooth circle on a pixel grid are used to make <span class="emphasis">optimal use of memory</span>.
+        </li>
+        <li><strong>Pointers:</strong> The game makes extensive use of pointers. This <span class="emphasis">allows for
+            memory to be used and
+            freed by the application</span> as needed during runtime without needing to reserve a fixed amount of memory
+          at
+          start. This technique is used extensively for menus where they are <span class="emphasis">only resident in
+            memory when they are
+            needed</span>.
+        </li>
+        <li><strong>Efficient Structure Packing:</strong> The Microsoft Visual Studio extension '<a
+            href="https://github.com/Viladoman/StructLayout" target="_blank">StructLayout</a>' is used to ensure that
+          all
+          the structures and classes used in the system are <span class="emphasis">tightly packed</span>, ensuring as
+          little memory is wasted on
+          padding as possible.
         </li>
       </ul>
+
+      To conclude, the game produced for this assignment ended up meeting all the brief requirements. Further to this
+      the game also explores a <span class="emphasis">variety of extra features</span> which further improved my
+      understanding of game engine less
+      development. It is important at this point to discuss this game's links to <a
+        href="https://github.com/PycraftDeveloper/PMMA" target="_blank">PMMA</a>. This game uses ideas inspired by PMMA
+      5.0, such as the interface for some of the shape and text rendering APIs. However, the game is completely seperate
+      to PMMA and went on to inspire <span class="emphasis">exploration into Signed Distance Field (SDF)
+        rendering</span> in PMMA 5.1. SDF rendering
+      was explored as a potential optimisation technique for the Sokoban game, but disregarded for being too complex for
+      the time allocated for the assignment. SDF rendering will now be considered for future 2D rendering assignments if
+      applicable.
     </div>
 
     <h2 class="section-title">Images</h2>

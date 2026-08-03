@@ -442,7 +442,27 @@ a:focus {
 .video-wrapper {
   display: flex;
   justify-content: center;
+
+  /* 1. Set the exact width you want the video to shrink to */
+  width: 100%;
+  max-width: 800px; /* Adjust this number to whatever size you prefer */
+  margin: 0 auto;  /* Optional: centers the wrapper itself on the screen */
+
+  background: black !important;
+  border: 2px solid var(--accent);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  overflow: hidden;
 }
+
+/* 2. Force the lite player to obey your new boundary size */
+.video-wrapper .yt-lite {
+  width: 100%;
+  border-radius: 18px;
+  max-width: none !important;
+  overflow: hidden;
+}
+
 
 .PMMA,
 .Ghouls-And-Gold,

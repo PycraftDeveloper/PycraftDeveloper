@@ -472,6 +472,7 @@ a:focus {
 .SmashSquad,
 .laames,
 .Bouncing-Balls,
+.Gravity-Labs,
 .Sokoban {
   background: var(--bg);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
@@ -523,6 +524,22 @@ a:focus {
 .Bouncing-Balls {
   background: #c0d3ea;
   color: #000;
+}
+
+.Sokoban {
+  background-color: white;
+  color: #000;
+}
+
+.Gravity-Labs {
+  background-color: white;
+  color: #000;
+
+  background-image: url("../images/All Works/Gravity Labs/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; /* Useful if you have nested absolute elements */
 }
 
 .image-grid {

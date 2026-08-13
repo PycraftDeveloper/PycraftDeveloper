@@ -529,6 +529,12 @@ a:focus {
 .Sokoban {
   background-color: white;
   color: #000;
+
+    background-image: url("../images/All Works/Sokoban/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; /* Useful if you have nested absolute elements */
 }
 
 .Gravity-Labs {

@@ -463,17 +463,7 @@ a:focus {
   overflow: hidden;
 }
 
-
-.PMMA,
-.Ghouls-And-Gold,
-.httyd-game,
-.gourmet-heaven,
-.Game_1942,
-.SmashSquad,
-.laames,
-.Bouncing-Balls,
-.Gravity-Labs,
-.Sokoban {
+.WorkEntry {
   background: var(--bg);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
   margin-bottom: 40px;
@@ -487,7 +477,7 @@ a:focus {
   color: #000;
 }
 
-.httyd-game {
+.HTTYD-Game {
   background: #a69e79;
   color: #000;
 }
@@ -501,7 +491,7 @@ a:focus {
   }
 }
 
-.gourmet-heaven {
+.Gourmet-Heaven {
   background: #ffe3cb;
   color: #000;
 }
@@ -511,7 +501,7 @@ a:focus {
   color: #000;
 }
 
-.laames {
+.LAaMES {
   background: #a5abc9;
   color: #000;
 }
@@ -546,6 +536,11 @@ a:focus {
   background-position: center;
   background-repeat: no-repeat;
   position: relative; /* Useful if you have nested absolute elements */
+}
+
+.UoN-VR {
+  background: #101010;
+  color: #fff;
 }
 
 .image-grid {

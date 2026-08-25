@@ -3,40 +3,40 @@
 // Auto-rotate, random start, arrow + dot navigation, keyboard and touch support.
 // Recalculates sizes on resize.
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   const slidesData = [
     {
       title: "PMMA - Python Multi-Media API",
       subtitle: "(Click to find out more)",
       image: "images/Featured/pmma.jpg",
-      target: "#PMMA"
+      target: "#PMMA",
     },
     {
       title: "Gourmet Heaven",
       subtitle: "(Click to find out more)",
       image: "images/Featured/gourmet_heaven.jpg",
-      target: "#Gourmet-Heaven"
+      target: "#Gourmet-Heaven",
     },
     {
       title: "Ghouls and Gold",
       subtitle: "(Click to find out more)",
       image: "images/Featured/ghouls_and_gold.jpg",
-      target: "#Ghouls-And-Gold"
+      target: "#Ghouls-And-Gold",
     },
     {
       title: "How To Train Your Dragon Game",
       subtitle: "(Click to find out more)",
       image: "images/Featured/httyd_game.jpg",
-      target: "#httyd-game"
-    }
+      target: "#HTTYD-Game",
+    },
   ];
 
-  const track = document.getElementById('carouselTrack');
-  const dotsContainer = document.getElementById('carouselDots');
-  const caption = document.getElementById('carouselCaption');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  const viewport = document.querySelector('.carousel-viewport');
+  const track = document.getElementById("carouselTrack");
+  const dotsContainer = document.getElementById("carouselDots");
+  const caption = document.getElementById("carouselCaption");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const viewport = document.querySelector(".carousel-viewport");
 
   let current = Math.floor(Math.random() * slidesData.length); // random start
   const slideCount = slidesData.length;
@@ -47,25 +47,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // build slides + dots
   slidesData.forEach((s, i) => {
-    const slide = document.createElement('div');
-    slide.className = 'carousel-slide';
+    const slide = document.createElement("div");
+    slide.className = "carousel-slide";
     slide.style.backgroundImage = `url("${s.image}")`;
-    slide.setAttribute('role', 'group');
-    slide.setAttribute('aria-roledescription', 'slide');
-    slide.setAttribute('aria-label', `${i + 1} of ${slidesData.length}`);
-    slide.setAttribute('data-index', i);
+    slide.setAttribute("role", "group");
+    slide.setAttribute("aria-roledescription", "slide");
+    slide.setAttribute("aria-label", `${i + 1} of ${slidesData.length}`);
+    slide.setAttribute("data-index", i);
 
-    slide.addEventListener('click', () => {
+    slide.addEventListener("click", () => {
       const target = slidesData[i].target;
       if (target) {
         document.querySelector(target).scrollIntoView({
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }
     });
 
-    const info = document.createElement('div');
-    info.className = 'slide-info';
+    const info = document.createElement("div");
+    info.className = "slide-info";
     info.innerHTML = `
       <div class="slide-title">${s.title}</div>
       <div class="slide-subtitle">${s.subtitle}</div>
@@ -74,11 +74,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     track.appendChild(slide);
 
-    const dot = document.createElement('button');
-    dot.className = 'carousel-dot';
-    dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
-    dot.setAttribute('data-index', i);
-    dot.addEventListener('click', () => moveTo(i));
+    const dot = document.createElement("button");
+    dot.className = "carousel-dot";
+    dot.setAttribute("aria-label", `Go to slide ${i + 1}`);
+    dot.setAttribute("data-index", i);
+    dot.addEventListener("click", () => moveTo(i));
     dotsContainer.appendChild(dot);
   });
 
@@ -91,10 +91,12 @@ document.addEventListener('DOMContentLoaded', function () {
     slideWidth = Math.max(0, viewport.clientWidth);
 
     // disable transition when resizing to avoid animation jump
-    track.style.transition = animate ? 'transform 480ms cubic-bezier(.22,.9,.2,1)' : 'none';
+    track.style.transition = animate
+      ? "transform 480ms cubic-bezier(.22,.9,.2,1)"
+      : "none";
 
     // assign each slide an explicit pixel width
-    slides.forEach(s => {
+    slides.forEach((s) => {
       s.style.width = `${slideWidth}px`;
     });
 
@@ -106,30 +108,36 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function updateUI() {
-    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    dots.forEach((d, i) => d.classList.toggle("active", i === current));
     caption.textContent = slidesData[current].title;
   }
 
   function moveTo(index, animate = true) {
     current = (index + slideCount) % slideCount;
     // ensure transition is enabled
-    track.style.transition = animate ? 'transform 480ms cubic-bezier(.22,.9,.2,1)' : 'none';
+    track.style.transition = animate
+      ? "transform 480ms cubic-bezier(.22,.9,.2,1)"
+      : "none";
     // use pixel transform for exact alignment
     track.style.transform = `translateX(${-current * slideWidth}px)`;
     updateUI();
     restartTimer();
   }
 
-  function next() { moveTo(current + 1); }
-  function prev() { moveTo(current - 1); }
+  function next() {
+    moveTo(current + 1);
+  }
+  function prev() {
+    moveTo(current - 1);
+  }
 
-  nextBtn.addEventListener('click', next);
-  prevBtn.addEventListener('click', prev);
+  nextBtn.addEventListener("click", next);
+  prevBtn.addEventListener("click", prev);
 
   // keyboard support (focusable viewport)
-  viewport.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') prev();
-    if (e.key === 'ArrowRight') next();
+  viewport.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") prev();
+    if (e.key === "ArrowRight") next();
   });
 
   // autoplay
@@ -149,17 +157,21 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // pause on hover/focus
-  viewport.addEventListener('mouseenter', stopTimer);
-  viewport.addEventListener('mouseleave', startTimer);
-  viewport.addEventListener('focusin', stopTimer);
-  viewport.addEventListener('focusout', startTimer);
+  viewport.addEventListener("mouseenter", stopTimer);
+  viewport.addEventListener("mouseleave", startTimer);
+  viewport.addEventListener("focusin", stopTimer);
+  viewport.addEventListener("focusout", startTimer);
 
   // touch support: swipe
   let touchStartX = 0;
-  viewport.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].clientX;
-  }, {passive:true});
-  viewport.addEventListener('touchend', (e) => {
+  viewport.addEventListener(
+    "touchstart",
+    (e) => {
+      touchStartX = e.changedTouches[0].clientX;
+    },
+    { passive: true },
+  );
+  viewport.addEventListener("touchend", (e) => {
     const touchEndX = e.changedTouches[0].clientX;
     const diff = touchEndX - touchStartX;
     if (Math.abs(diff) > 40) {
@@ -178,11 +190,11 @@ document.addEventListener('DOMContentLoaded', function () {
       setSizes(false);
     }, 120);
   }
-  window.addEventListener('resize', onResize);
+  window.addEventListener("resize", onResize);
 
   // ensure sizes are set after images/fonts load
   function init() {
-    setSizes(false);       // compute sizes without animation
+    setSizes(false); // compute sizes without animation
     updateUI();
     // start the autoplay after layout settled
     startTimer();
@@ -190,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Try to initialize after images have loaded; also fallback to rAF
   let imagesToLoad = 0;
-  slides.forEach(sl => {
+  slides.forEach((sl) => {
     const bg = sl.style.backgroundImage;
     const match = bg && bg.match(/url\("(.*)"\)/);
     if (match && match[1]) {
@@ -208,6 +220,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // expose for debugging
   window.__portfolioCarousel = {
-    moveTo, next, prev, getCurrent: () => current, recalc: () => setSizes(false)
+    moveTo,
+    next,
+    prev,
+    getCurrent: () => current,
+    recalc: () => setSizes(false),
   };
 });

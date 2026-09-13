@@ -16,7 +16,7 @@
   <a href="https://github.com/PycraftDeveloper/" align="center" ><img align="center"  alt="" src="https://visitor-badge.laobi.icu/badge?page_id=PycraftDeveloper.PycraftDeveloper"></a>
 </p>
 
-I'm a BSc Games Programming student (2nd year) at the University of Northampton. To see what I've been up to, [check out my portfolio](https://pycraftdeveloper.github.io/PycraftDeveloper/)! I am also working on my own graphics and multi-media API, [PMMA](https://github.com/PycraftDeveloper/PMMA) as well as [my other programming projects](https://github.com/PycraftDeveloper?tab=repositories). I spend my free time walking, cycling or gaming!
+I'm a BSc Games Programming student (2nd year) at the University of Northampton. To see what I've been up to, [check out my portfolio](https://pycraftdeveloper.github.io/PycraftDeveloper/)! I am also working on my own graphics and multi-media API, [PMMA](https://github.com/Project-PMMA/PMMA) as well as [my other programming projects](https://github.com/PycraftDeveloper?tab=repositories). I spend my free time walking, cycling or gaming!
 
 <!-- ## 📢 Announcements -->
 

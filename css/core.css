@@ -115,9 +115,10 @@ body {
 }
 
 .site {
+  position: relative;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 18px;
 }
 
 a:link {
@@ -140,53 +141,53 @@ a:focus {
   /* Provides visual feedback */
 }
 
-/* Container that sits behind everything */
 .hexagon-background {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -2;
-  /* Pushes it behind your project cards */
-  background-color: var(--bg);
-  /* Your base background color */
   overflow: hidden;
+  z-index: -2;
 }
 
-.hex {
+.hex-grid {
+  display: block;
   position: absolute;
-  transform: translate(-50%, -50%);
-  overflow: visible;
-  /* Ensures borders don't get clipped at the SVG bounds */
+  top: 0;
+  left: 0;
 }
 
-.hex polygon {
-  /* Change this to your desired line colour */
-  stroke-width: 2px;
-  /* Change this to your desired line width */
-  stroke-linejoin: round;
-  /* Makes the corners look smooth */
-  fill: color-mix(in srgb, var(--bg) 75%, transparent);
+.hex-grid__lines polygon {
+  fill: none;
+  stroke: url(#hexGradient);
+  stroke-width: 1px;
+  opacity: 0.35;
+}
+
+.hex-grid__dots circle {
+  fill: url(#hexGradient);
+  opacity: 0.7;
 }
 
 
 .frosted-background {
-  position: fixed;
+  position: absolute;
   top: 0;
-  height: 100vh;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
   z-index: -1;
   pointer-events: none;
 
-  /* Perfect alignment fix */
-  width: 100%;
-  max-width: 1200px;
-  left: 50%;
-  transform: translateX(-50%);
+  background: color-mix(
+    in srgb,
+    var(--bg) 80%,
+    transparent
+  );
 
-  /* Center color (Frosted) */
-  background: color-mix(in srgb, var(--bg) 85%, transparent);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(2px);
 }
 
 .logo {
@@ -413,8 +414,8 @@ a:focus {
   height: 48px;
   border-radius: 50%;
   border: none;
-  background: color-mix(in srgb, var(--bg) 85%, transparent);
-  backdrop-filter: blur(4px);
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  backdrop-filter: blur(2px);
   color: var(--text);
   font-size: 24px;
   cursor: pointer;
@@ -564,8 +565,8 @@ select {
 footer {
   text-align: center;
 
-  background: var(--bg);
-  backdrop-filter: blur(6px);
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  backdrop-filter: blur(2px);
 
   color: var(--text);
   padding: 10px;

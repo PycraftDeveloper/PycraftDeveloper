@@ -9,35 +9,24 @@ Banner Video DMs: (1200, 420) px
 }
 
 .divider {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin: 20px 0;
+    text-align: center;
 }
 
 .divider::before,
 .divider::after {
-  content: '';
-  flex: 1;
-  border-bottom: 2px solid var(--accent);
-  /* Line color and thickness */
-}
-
-.divider:not(:empty)::before {
-  margin-right: .5em;
-  /* Space between line and text */
-}
-
-.divider:not(:empty)::after {
-  margin-left: .5em;
-  /* Space between line and text */
+    content: '';
+    flex: 1;
+    border-bottom: 2px solid var(--accent);
 }
 
 .divider span {
-  padding: 5px 15px;
-  border-radius: 4px;
-  /* Rounded corners */
-  font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-weight: bold;
 }
 
 .contents {

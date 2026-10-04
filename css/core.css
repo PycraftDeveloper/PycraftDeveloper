@@ -7,6 +7,7 @@
   --dark_accent: rgb(0, 0, 128);
   --link_clicked: #551a8b;
   --shape: rgb(80, 80, 80);
+  --max-width: 1200px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -117,7 +118,7 @@ body {
 .site {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--max-width);
   margin: 0 auto;
 }
 
@@ -173,9 +174,9 @@ a:focus {
 .frosted-background {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -40px;
 
-  width: 100%;
+  width: calc(var(--max-width) + 80px);
   height: 100%;
 
   z-index: -1;
@@ -615,7 +616,7 @@ footer {
 
 /* Centers the whole layout and sets the max-width limit */
 .footer-wrap {
-  max-width: 1200px;
+  max-width: var(--max-width);
   margin: 0 auto;       /* Centers the container horizontally on the screen */
   padding: 0 20px;      /* Prevents the content from touching edges on small screens */
   width: 100%;          /* Ensures it takes full width up to 1200px */

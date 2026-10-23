@@ -39,6 +39,7 @@ Banner Video DMs: (1200, 420) px
 }
 
 .logo img {
+  margin-top: 25px;
   max-height: 256px;
   max-width: 256px;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
@@ -62,6 +63,8 @@ Banner Video DMs: (1200, 420) px
 
 .details {
   text-align: left;
+  max-width: var(--max-content-width);
+  margin: 0 auto 40px auto;
 }
 
 .performance {

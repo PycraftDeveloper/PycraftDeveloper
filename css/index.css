@@ -43,7 +43,7 @@ Banner Video DMs: (1200, 420) px
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
+  width: min(100%, var(--max-content-width));
   height: 100%;
   object-fit: cover;
   transform: translate(-50%, -50%);
@@ -76,7 +76,7 @@ Banner Video DMs: (1200, 420) px
 /* Carousel */
 .featured-section {
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--max-content-width);
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -91,7 +91,7 @@ Banner Video DMs: (1200, 420) px
   overflow: visible;
   /* arrows sit outside viewport */
   max-height: 75vh;
-  max-width: 1200px;
+  max-width: var(--max-content-width);
   width: 100%;
   aspect-ratio: 16 / 9;
   margin: 0 auto;

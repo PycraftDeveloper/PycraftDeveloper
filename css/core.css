@@ -8,6 +8,7 @@
   --link_clicked: #551a8b;
   --shape: rgb(80, 80, 80);
   --max-width: 1200px;
+  --max-content-width: 1150px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -122,6 +123,7 @@ body {
   margin: 0 auto;
   min-height: 100%;
   display: flow-root;
+  overflow-x: hidden; /* Prevents internal elements from causing horizontal scroll */
 }
 
 a:link {
@@ -474,6 +476,8 @@ a:focus {
   border-radius: 20px;
   border: 2px solid var(--accent);
   padding: 20px;
+  width: var(--max-content-width);
+  margin: 0 auto 40px auto;
 }
 
 .PMMA {

@@ -6,6 +6,18 @@
 document.addEventListener("DOMContentLoaded", function () {
   const slidesData = [
     {
+      title: "Gravity Labs",
+      subtitle: "(Click to find out more)",
+      image: "images/Featured/gravity_labs.jpg",
+      target: "#Gravity-Labs",
+    },
+    {
+      title: "Sokoban",
+      subtitle: "(Click to find out more)",
+      image: "images/Featured/sokoban.jpg",
+      target: "#Sokoban",
+    },
+    {
       title: "PMMA - Python Multi-Media API",
       subtitle: "(Click to find out more)",
       image: "images/Featured/pmma.jpg",
@@ -17,18 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "images/Featured/gourmet_heaven.jpg",
       target: "#Gourmet-Heaven",
     },
-    {
-      title: "Ghouls and Gold",
-      subtitle: "(Click to find out more)",
-      image: "images/Featured/ghouls_and_gold.jpg",
-      target: "#Ghouls-And-Gold",
-    },
-    {
-      title: "How To Train Your Dragon Game",
-      subtitle: "(Click to find out more)",
-      image: "images/Featured/httyd_game.jpg",
-      target: "#HTTYD-Game",
-    },
+
   ];
 
   const track = document.getElementById("carouselTrack");
